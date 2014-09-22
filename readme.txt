@@ -7,7 +7,7 @@ Author URI: http://fatcatapps.com/
 Plugin URI: http://fatcatapps.com/
 Requires at least: 3.9.1
 Tested up to: 4.0
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,8 +49,11 @@ We've got a bunch of feature ideas, such as more opt-in form designs and various
 
 == Changelog ==
 
+= 1.0.3 =
+* Added screenshots
+
 = 1.0.2 =
-* Updated readme.txt, added screenshots.
+* Updated readme.txt.
 
 = 1.0.1 =
 * Added "Tested up to: 4.0"
