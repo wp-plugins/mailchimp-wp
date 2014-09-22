@@ -4,7 +4,7 @@
     Plugin URI: http://fatcatapps.com/eoi
     Description: The Easy Opt-ins For Mailchimp WordPress Plugin Helps You Get More Email Subscribers. Create Beautiful & Highly Converting Opt-In Widgets In Less Than 2 Minutes.
     Author: Fatcat Apps
-    Version: 1.0.2
+    Version: 1.0.3
     Author URI: http://http://fatcatapps.com/
 */
 
@@ -41,16 +41,14 @@ include_once plugin_dir_path( __FILE__ ) . 'includes/eoi-pointer.php';
 
 define('EOI_PLUGIN_PATH_FOR_SUBDIRS', plugin_dir_path(str_replace(dirname(dirname(__FILE__)), '', dirname(__FILE__))));
 
-class DhEasyOptIns
-{
+class DhEasyOptIns {
     var $ver = '1.0.0';
     var $shortcode = 'opt-in';
     var $settings;
+    var $provider = '';
     var $providers = array();
-    var $provider = 'mailchimp';
 
-    function __construct()
-    {
+    function __construct() {
         global $fca_eoi_shortcodes;
 
         $post_type = $this->get_current_post_type();
@@ -58,35 +56,32 @@ class DhEasyOptIns
 
         // Settings
         $this->settings();
-        $this->settings[ 'provider' ] = $this->provider;
+
+        // Add provider to settings
+        // If there is only one provider, use it
+        $providers_available = glob( $this->settings['plugin_dir'] . 'providers/*', GLOB_ONLYDIR );
+        if( 1 == count( $providers_available ) ) {
+            $provider = str_replace( $this->settings['plugin_dir'] . 'providers/' , '', $providers_available[0]);
+            $this->settings[ 'provider' ] = $provider;
+            $this->provider = $provider;
+        }
+
+        // Add options that are stored in DB if any
         $this->settings[ 'eoi_settings' ] = $eoi_settings;
 
         // Abstract helper class
         include_once $this->settings[ 'plugin_dir' ] . "providers/$this->provider/functions.php";
 
-        // Initialize a provider instance
-        // $this->settings[ 'helper' ] = provider_object(
-        //     $this->settings[ 'providers' ][ $this->provider ]
-        //     , $this->settings
-        //     , $eoi_settings
-        // );
-                
         // Load extensions
         $post_types = new EasyOptInsPostTypes($this->settings);
-        // $settings   = new EasyOptInsSettings($this->settings);
-        // $customize  = new EasyOptInsCustomize($this->settings);
         $fca_eoi_shortcodes = new EasyOptInsShortcodes($this->settings);
         $widget     = new EasyOptInsWidgetHelper($this->settings);
 
         // Load subscribing banner
         $pointer = new EasyOptInsPointer($post_type, $this->settings);
-        
-        // Enqueue CSS styles
-        // add_action('admin_enqueue_scripts', array($this, 'enqueue_assets'));
     }
 
-    function get_current_post_type()
-    {
+    function get_current_post_type() {
         global $post, $typenow, $current_screen;
 
         if ( $post && $post->post_type ) {
@@ -102,8 +97,7 @@ class DhEasyOptIns
         return null;
     }
 
-    function enqueue_assets( $hook )
-    {
+    function enqueue_assets( $hook ) {
         // CSS Style
         wp_enqueue_style('dh-easy-opt-in', $this->settings['plugin_url'] . '/assets/ui/style.css' );
 
@@ -111,8 +105,7 @@ class DhEasyOptIns
         wp_enqueue_script('dh-easy-opt-in-colorbox', $this->settings['plugin_url'] . '/assets/ui/colorbox/jquery.colorbox-min.js', array('jquery'));
     }
 
-    function settings()
-    {
+    function settings() {
         $this->settings['plugin_dir'] = plugin_dir_path( __FILE__ );
         $this->settings['plugin_url'] = plugins_url('', __FILE__);
         $this->settings['shortcode']  = $this->shortcode;
