@@ -2,9 +2,9 @@
 /*
     Plugin Name: Easy Opt-ins For Mailchimp
     Plugin URI: http://fatcatapps.com/eoi
-    Description: Easy Opt-ins For Mailchimp Helps You Get More Email Subscribers. Create Beautiful & Highly Converting Opt-In Widgets In Less Than 2 Minutes.
+    Description: The Easy Opt-ins For Mailchimp WordPress Plugin Helps You Get More Email Subscribers. Create Beautiful & Highly Converting Opt-In Widgets In Less Than 2 Minutes.
     Author: Fatcat Apps
-    Version: 1.0.1
+    Version: 1.0.2
     Author URI: http://http://fatcatapps.com/
 */
 
