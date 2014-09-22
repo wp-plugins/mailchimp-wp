@@ -11,7 +11,7 @@ Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The Easy Opt-ins For Mailchimp WordPress Plugin Helps You Get More Email Subscribers. Create Beautiful & Highly Converting Opt-In Widgets In Less Than 2 Minutes.
+The Easy Opt-ins For Mailchimp WordPress Plugin Helps You Get More Email Subscribers. Create Beautiful & Converting Opt-In Widgets In Minutes.
 
 == Description ==
 *   The **Easy Opt-ins For Mailchimp** WordPress Plugin makes it easy to create highly convereting Mailchimp opt-in forms in less than two minutes.
@@ -36,6 +36,7 @@ The Easy Opt-ins For Mailchimp WordPress Plugin Helps You Get More Email Subscri
 We've got a bunch of feature ideas, such as more opt-in form designs and various types of Mailchimp signup forms (other than sidebar widgets). We'd love to hear your suggestions, feel free to share them in the support forum.
 
 == Screenshots ==
+
 1. The Mailchimp Opt-in Form Builder
 2. The Form on a live website
 3. Built-in form validation
