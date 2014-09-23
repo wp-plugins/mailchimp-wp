@@ -4,7 +4,7 @@
     Plugin URI: http://fatcatapps.com/eoi
     Description: The Easy Opt-ins For Mailchimp WordPress Plugin Helps You Get More Email Subscribers. Create Beautiful & Highly Converting Opt-In Widgets In Less Than 2 Minutes.
     Author: Fatcat Apps
-    Version: 1.0.3
+    Version: 1.0.4
     Author URI: http://http://fatcatapps.com/
 */
 

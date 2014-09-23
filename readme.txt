@@ -7,33 +7,47 @@ Author URI: http://fatcatapps.com/
 Plugin URI: http://fatcatapps.com/
 Requires at least: 3.9.1
 Tested up to: 4.0
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 The Easy Opt-ins For Mailchimp WordPress Plugin Helps You Get More Email Subscribers. Create Beautiful & Converting Opt-In Widgets In Minutes.
 
 == Description ==
-*   The **Easy Opt-ins For Mailchimp** WordPress Plugin makes it easy to create highly convereting Mailchimp opt-in forms in less than two minutes.
+
+= Easy Opt-ins For Mailchimp WordPress Plugin =
+
+The **Easy Opt-ins For Mailchimp** WordPress Plugin makes it easy to create highly convereting Mailchimp sign-up and opt-in forms in less than two minutes.
 
 [youtube http://www.youtube.com/watch?v=oDrN-R1voxs]
+
+*   [Find a live demo here.](http://demo.fatcatapps.com/easyoptins/)
+
+= Mailchimp Opt-in Forms =
 
 *   Easy Opt-ins For Mailchimp implements conversion rate optimization (CRO) best practices and guides you through the process of creating a Mailchimp subscription form that converts.
 
 *   After building your signup form you can publish it as a Mailchimp WordPress widget.
 
-*   [Find a live demo here.](http://demo.fatcatapps.com/easyoptins/)
 
-**Features**
+= Features =
 
-*   Works with responsive sites
+*   Opt-in form works with responsive sites
 *   Intuitive User Interface
 *   Built-in Conversion Rate Optimization Best Practices
-*	Customize your design: change copy, font-size, colors and more.
+*	Customize your sign-up form: change copy, font-size, colors and more.
 
-**Roadmap**
+= Roadmap =
 
 We've got a bunch of feature ideas, such as more opt-in form designs and various types of Mailchimp signup forms (other than sidebar widgets). We'd love to hear your suggestions, feel free to share them in the support forum.
+
+
+= Relevant Links =
+
+*   [Live demo](http://demo.fatcatapps.com/easyoptins/)
+*   [FatcatApps.com](http://fatcatapps.com/)
+*	[Other plugins by FatcatApps](https://profiles.wordpress.org/fatcatapps/#content-plugins)
+*	[FatcatApps founder, David Hehenberger, on Twitter](https://twitter.com/davidhme)
 
 == Screenshots ==
 
@@ -49,6 +63,10 @@ We've got a bunch of feature ideas, such as more opt-in form designs and various
 
 == Changelog ==
 
+= 1.0.4 =
+* Updated readme.txt.
+* Updated Mailchimp API integration
+
 = 1.0.3 =
 * Added screenshots
 
@@ -60,7 +78,6 @@ We've got a bunch of feature ideas, such as more opt-in form designs and various
 
 = 1.0 =
 * Initial release
-
 
 = 0.9 =
 * Beta release
