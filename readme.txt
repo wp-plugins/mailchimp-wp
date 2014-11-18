@@ -1,45 +1,55 @@
-=== Easy Opt-ins For Mailchimp ===
+=== Easy Opt-ins For Mailchimp by Fatcat Apps===
 Contributors: davidhme, fatcatapps
 Donate link: http://fatcatapps.com/
 Tags: mailchimp, mailchimp wordpress, mailchimp form, mailchimp widget, mailchimp plugin, mailchimp wordpress widget, mailchimp signup form, mailchimp signup widget, Fatcat Apps
 
 Author URI: http://fatcatapps.com/
-Plugin URI: http://fatcatapps.com/
+Plugin URI: http://fatcatapps.com/eoi
 Requires at least: 3.9.1
 Tested up to: 4.0
-Stable tag: 1.0.4
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The Easy Opt-ins For Mailchimp WordPress Plugin Helps You Get More Email Subscribers. Create Beautiful & Converting Opt-In Widgets In Minutes.
+ The Easy Opt-ins For Mailchimp WordPress Plugin Makes It Super Simple To Create Beautiful Mailchimp Sign-up Widgets & Forms In Minutes.
 
 == Description ==
 
 = Easy Opt-ins For Mailchimp WordPress Plugin =
 
-The **Easy Opt-ins For Mailchimp** WordPress Plugin makes it easy to create highly convereting Mailchimp sign-up and opt-in forms in less than two minutes.
+The **Easy Opt-ins For Mailchimp** WordPress Plugin makes it easy to create highly convereting Mailchimp sign-up and opt-in forms in less than two minutes. You can publish your Mailchimp signup form as a sidebar widget or as a post box.
 
 [youtube http://www.youtube.com/watch?v=oDrN-R1voxs]
 
 *   [Find a live demo here.](http://demo.fatcatapps.com/easyoptins/)
 
-= Mailchimp Opt-in Forms =
+= Opt-in Types =
 
-*   Easy Opt-ins For Mailchimp implements conversion rate optimization (CRO) best practices and guides you through the process of creating a Mailchimp subscription form that converts.
-
-*   After building your signup form you can publish it as a Mailchimp WordPress widget.
-
+*   Post boxes. Post boxes are opt-in forms specifically built to be included inside of a post or page. You can add them using shortcodes, or you can automatically append them to the posts/categories/pages of your choice.
+*   Sidebar widgets. Our Mailchimp widgets make it easy to add opt-in forms to your sidebar.
 
 = Features =
 
-*   Opt-in form works with responsive sites
-*   Intuitive User Interface
-*   Built-in Conversion Rate Optimization Best Practices
-*	Customize your sign-up form: change copy, font-size, colors and more.
+*   Mailchimp opt-in form works with responsive sites.
+*   Intuitive User Interface.
+*	Customize your Mailchimp sign-up form: change copy, font-size, colors and more.
+*	Beatiful Mailchimp opt-in form designs built for conversions.
+*	Build unlimited Mailchimp forms.
+*	Smart form validation.
+*	Redirect users to a "Thank You"-page after submitting a form..
+
+= Developer Friendly =
+
+*   Easily customize your Mailchimp forms using CSS.
+*   Use our "No CSS" layout if you want to inherit your themes' form styling.
 
 = Roadmap =
 
 We've got a bunch of feature ideas, such as more opt-in form designs and various types of Mailchimp signup forms (other than sidebar widgets). We'd love to hear your suggestions, feel free to share them in the support forum.
+
+= Requirements =
+
+You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 
 
 = Relevant Links =
@@ -54,6 +64,8 @@ We've got a bunch of feature ideas, such as more opt-in form designs and various
 1. The Mailchimp Opt-in Form Builder
 2. The Form on a live website
 3. Built-in form validation
+4. Another layout
+5. Our Post box
 
 == Installation ==
 
@@ -62,6 +74,14 @@ We've got a bunch of feature ideas, such as more opt-in form designs and various
 3. In your sidebar, select 'Opt In Forms -> Add New' to create a new table
 
 == Changelog ==
+
+= 1.1 =
+* Added new opt-in type: Post Boxes which can be published using shortcodes.
+* Added 2 new widget layouts.
+* Added 2 new post box layouts.
+* Added Custom CSS power-up.
+* Added "No CSS" layouts.
+* Lots of UI improvements.
 
 = 1.0.4 =
 * Updated readme.txt.
