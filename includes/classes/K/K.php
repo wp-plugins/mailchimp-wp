@@ -364,9 +364,6 @@ function k_scripts() {
 			padding-left: .5em !important;
 			padding-right: .5em !important;
 		}
-		fieldset.k.expanded {
-			display: block !important;
-		}
 		fieldset.k legend {
 			background: white;
 			padding: .25em .5em;
@@ -384,7 +381,7 @@ function k_scripts() {
 			cursor: pointer;
 		}
 		fieldset.k.collapsed :not(legend) {
-			display: none !important;
+			display: none;
 		}
 		fieldset.k.collapsed {
 			display: inline;
@@ -393,12 +390,12 @@ function k_scripts() {
 	</style>
 	<script>
 		jQuery( 'document' ).ready( function( $ ) {
-			$( '.collapsible > legend' ).click( function (){
+			$( '.collapsible legend' ).click( function (){
 				$this = $( this );
 				$fieldset = $this.parent();
 				// Collapse all except target
 				$fieldset.parent()
-					.find( 'fieldset.collapsible' )
+					.find( 'fieldset' )
 					.not( $fieldset )
 					.removeClass( 'expanded' )
 					.addClass( 'collapsed' )
