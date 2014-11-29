@@ -1,15 +1,14 @@
 <?php
 /*
-    Plugin Name: Easy Opt-ins For Mailchimp
-    Plugin URI: http://fatcatapps.com/eoi
-    Description: The Easy Opt-ins For Mailchimp WordPress Plugin Helps You Get More Email Subscribers. Create Beautiful & Highly Converting Opt-In Widgets In Less Than 2 Minutes.
+    Plugin Name: Easy Opt-ins
+    Plugin URI: http://fatcatapps.com/easyoptins
+    Description: The Easy Opt-ins WordPress Plugin Helps You Get More Email Subscribers. Create Beautiful & Highly Converting Opt-In Widgets In Less Than 2 Minutes.
     Author: Fatcat Apps
-    Version: 1.1.1
+    Version: 1.1.2
     Author URI: http://http://fatcatapps.com/
 */
 
 // define( 'FCA_EOI_DEBUG', true );
-
 if ( ! function_exists( 'is_admin' ) ) {
     exit();
 }
@@ -27,8 +26,19 @@ if ( ! class_exists ( 'Mustache_Engine' ) ) {
     require plugin_dir_path( __FILE__ ) . 'includes/classes/Mustache/Autoloader.php';
     Mustache_Autoloader::register();
 }
+
+/**
+ * Include scssphp
+ * 
+ * Latest version requires PHP 5.3 
+ * Version O.0.15 works with PHP 5.2
+ */
 if ( ! class_exists ( 'scssc' ) ) {
-    require plugin_dir_path( __FILE__ ) . 'includes/classes/scssphp/scss.inc.php';
+    if( defined( '__DIR__' ) ) {
+        require plugin_dir_path( __FILE__ ) . 'includes/classes/scssphp/scss.inc.php';
+    } else {
+        require plugin_dir_path( __FILE__ ) . 'includes/classes/scssphp-0.0.15/scss.inc.php';
+    }
 }
 
 include_once plugin_dir_path( __FILE__ ) . 'includes/eoi-post-types.php';
@@ -39,6 +49,7 @@ include_once plugin_dir_path( __FILE__ ) . 'includes/eoi-pointer.php';
 include_once plugin_dir_path( __FILE__ ) . 'includes/eoi-tour-pointer.php';
 include_once plugin_dir_path( __FILE__ ) . 'includes/power-ups/eoi-powerups-setting.php';
 include_once plugin_dir_path( __FILE__ ) . 'includes/compatibility-mode/eoi-compatibility-mode.php';
+include_once plugin_dir_path( __FILE__ ) . 'includes/eoi-upgrade.php';
 
 define(
     'EOI_PLUGIN_PATH_FOR_SUBDIRS'
@@ -66,8 +77,8 @@ class DhEasyOptIns {
         if( ! $this->check_sanity() ) {
             add_action( 'admin_init', array( $this, 'shutdown' ) );
             return;
-        }
-
+        }        
+        
         // Add provider to settings
         $providers_available = array_keys( $this->settings[ 'providers' ] );
         
@@ -103,6 +114,9 @@ class DhEasyOptIns {
         
         //load compatibility-mode
         new  EasyOptInsCompatibilityMode( $this->settings );
+        
+        //load EasyOptIns Upgrade notifications
+        new EasyOptInsUpgrade( $this->settings );
     }
 
     function get_current_post_type() {

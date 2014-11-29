@@ -1,0 +1,15 @@
+- /layouts/lightbox
+- /layouts/postbox/postbox_2
+- /layouts/postbox/postbox_3
+- /layouts/postbox/postbox_4
+- /layouts/widgets/layout_3
+- /layouts/widgets/layout_4
+- /layouts/widgets/layout_5
+- /providers/aweber
+- /providers/campaignmonitor
+- /easy-opt-ins-premium.php
+- /easy-opt-ins-campaign-monitor.php
+- /easy-opt-ins-aweber.php
+- /includes/licensing.php
+# mailchimp single-opt-in feature
+# sticky widget feature

@@ -35,15 +35,16 @@
 	width: 49%;
 	display: inline-block;
 }
-html .fca_eoi_postbox_1_email_field_wrapper {
-	float: right;
-}
-html[dir='rtl'] .fca_eoi_postbox_1_email_field_wrapper {
-	float: left;
+.fca_eoi_postbox_1_email_field_wrapper {
+	@if $ltr {
+		float: right;
+	} @else {
+		float: left;
+	}
 }
 .fca_eoi_postbox_1_inputs_wrapper_no_name .fca_eoi_postbox_1_email_field_wrapper {
 	float: none;
-	width: 100%;
+	width: calc( 100% - 2px );
 }
 .fca_eoi_postbox_1_email_field_wrapper input,
 .fca_eoi_postbox_1_email_field_wrapper input:focus,
@@ -52,6 +53,7 @@ html[dir='rtl'] .fca_eoi_postbox_1_email_field_wrapper {
 	background: none !important;
 	border: 0;
 	box-shadow: none;
+	display: inline-block;
 	font-size: 16px;
 	line-height: 1;
 	margin: 0;
@@ -64,6 +66,7 @@ html[dir='rtl'] .fca_eoi_postbox_1_email_field_wrapper {
 }
 .fca_eoi_postbox_1_submit_button_wrapper {
 	text-align: center;
+	width: 100%;
 }
 .fca_eoi_postbox_1_submit_button_wrapper input{
 	border: solid 1px transparent !important;
