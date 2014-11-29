@@ -32,7 +32,7 @@ class EoiStickyWidget {
 		);
 		K::input( 'fca_eoi[sticky_widget_margin_bottom]'
 			, array(
-				'value' => K::get_var( 'sticky_widget_margin_bottom', $fca_eoi_meta_post, '0' ),
+				'value' => 10,
 				'onkeypress' => "return isNumberKey(this)",
 			)
 			, array( 'format' => '<p style="display:none"><label>Margin Bottom: :input px</label></p>' )
@@ -40,9 +40,9 @@ class EoiStickyWidget {
 		K::input( 'fca_eoi[is_sticky_widget]'
 			, array(
 				'type' => 'checkbox',
-				'checked' => ( ! K::get_var( 'sticky_widget_margin_top', $fca_eoi_meta_post) )
+				'checked' => ( K::get_var( 'is_sticky_widget', $fca_eoi_meta_post ) )
 					? true
-					: K::get_var( 'is_sticky_widget', $fca_eoi_meta_post )
+					:false
 				,
 			)
 			, array( 'format' => '<p><label>:input Make this Opt-in Form Sticky</label></p>' )
@@ -92,7 +92,7 @@ class EoiStickyWidget {
 
 				$i++;
 
-				$width_inherit = K::get_var( 'width-inherit', $fca_eoi_meta_post )
+				$width_inherit = K::get_var( 'width-inherit', self::$fca_eoi_meta_post )
 					? 'true'
 					: 'false'
 				;

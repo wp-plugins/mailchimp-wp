@@ -478,7 +478,7 @@ jQuery( document ).ready( function( $ ) {
 
 	// If creating a new opt-in tick some checkboxes
 	$( '[name="fca_eoi[show_name_field]"]', 'body.post-new-php' ).attr( 'checked', 'checked' );
-	$( '[name="fca_eoi[show_fatcatapps_link]"]', 'body.post-new-php' ).attr( 'checked', 'checked' );
+	// $( '[name="fca_eoi[show_fatcatapps_link]"]', 'body.post-new-php' ).attr( 'checked', 'checked' );
 
 	// If editing an existing post, focus on the "Build" tab
 	$( 'a[href="#fca_eoi_meta_box_build"]', 'body.post-php' ).click();

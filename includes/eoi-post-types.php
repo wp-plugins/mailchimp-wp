@@ -7,7 +7,7 @@ class EasyOptInsPostTypes {
 	public function __construct( $settings ) {
 
 		$this->settings = $settings;
-
+                                                
 		$providers_available = array_keys( $this->settings[ 'providers' ] );
 
 		// Register custom post type
@@ -62,6 +62,8 @@ class EasyOptInsPostTypes {
 		foreach ( $providers_available as $provider ) {
 			add_filter( 'fca_eoi_alter_admin_notices', $provider . '_admin_notices', 10, 1 );
 		} 
+                
+                
 	}
 
 	public function more_settings() {
@@ -286,7 +288,15 @@ class EasyOptInsPostTypes {
 				include $layout_path . '/layout.php';
 				$layout[ 'css' ] = file_exists( $layout_path . '/layout.css' )
 					? file_get_contents( $layout_path . '/layout.css')
-					: '';
+					: ''
+				;
+				// Add $ltr SASS variable
+				$layout[ 'css' ] = sprintf( '$ltr: %s;', is_rtl() ? 'false' : 'true' )
+					. $layout[ 'css' ]
+				;
+				$scss = new scssc();
+				$scss->setFormatter("scss_formatter_compressed");
+				$layout[ 'css' ] = $scss->compile( $layout[ 'css' ] );
 				$layout[ 'template' ] = file_get_contents( $layout_path . '/layout.html');
 				$layout[ 'template' ] = str_replace(
 					array(

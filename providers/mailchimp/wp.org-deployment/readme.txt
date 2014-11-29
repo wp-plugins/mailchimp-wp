@@ -1,13 +1,13 @@
 === Easy Opt-ins For Mailchimp by Fatcat Apps===
 Contributors: davidhme, fatcatapps
-Donate link: http://fatcatapps.com/
+Donate link: http://fatcatapps.com/easyoptins?utm_campaign=eoi-description-cta&utm_source=eoi-free-mailchimp&utm_medium=referral
 Tags: mailchimp, mailchimp wordpress, mailchimp form, mailchimp widget, mailchimp plugin, mailchimp wordpress widget, mailchimp signup form, mailchimp signup widget, Fatcat Apps
 
 Author URI: http://fatcatapps.com/
 Plugin URI: http://fatcatapps.com/eoi
 Requires at least: 3.9.1
-Tested up to: 4.0
-Stable tag: 1.1.1
+Tested up to: 4.0.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,10 +18,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 = Easy Opt-ins For Mailchimp WordPress Plugin =
 
 The **Easy Opt-ins For Mailchimp** WordPress Plugin makes it easy to create highly convereting Mailchimp sign-up and opt-in forms in less than two minutes. You can publish your Mailchimp signup form as a sidebar widget or as a post box.
-
-[youtube http://www.youtube.com/watch?v=oDrN-R1voxs]
-
-*   [Find a live demo here.](http://demo.fatcatapps.com/easyoptins/)
 
 = Opt-in Types =
 
@@ -45,12 +41,21 @@ The **Easy Opt-ins For Mailchimp** WordPress Plugin makes it easy to create high
 
 = Roadmap =
 
-We've got a bunch of feature ideas, such as more opt-in form designs and various types of Mailchimp signup forms (other than sidebar widgets). We'd love to hear your suggestions, feel free to share them in the support forum.
+We've got a bunch of feature ideas, such as more opt-in form designs and various types of Mailchimp signup forms (other than post boxes sidebar widgets). We'd love to hear your suggestions, feel free to share them in the support forum.
 
 = Requirements =
 
 You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 
+> #### Easy Opt-ins Premium
+> Easy Opt-ins comes with the following features.<br />
+>
+> 4 Additional Gorgeous Layouts.<br />
+> Mailchimp single opt-in via API.<br />
+> Sticky sidebar widget.<br />
+> Priority Support.<br />
+>
+> [Learn more about Easy Opt-ins Premium >>](http://fatcatapps.com/easyoptins?utm_campaign=eoi-description-cta&utm_source=eoi-free-mailchimp&utm_medium=referral)
 
 = Relevant Links =
 
@@ -74,6 +79,12 @@ You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 3. In your sidebar, select 'Opt In Forms -> Add New' to create a new table
 
 == Changelog ==
+
+= 1.1.2 =
+* Numerous CSS Fixes
+* Fixed issues with PHP5.2
+* Confirmed compatibility with WordPress 4.0.1
+* Added Easy Opt-ins Premium banner
 
 = 1.1.1 =
 * Fixed an issue that was introduced with v1.1

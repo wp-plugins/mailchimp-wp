@@ -93,12 +93,10 @@ class EoiCustomCssBox {
 			}
 
 			jQuery( document ).ready( function( $ ) {
-				$('#fca_eoi_fieldset_custom_css_box:not(.expanded) legend').click(function(){
-					// Refresh CodeMirror
-					$( '.CodeMirror' ).each( function( i, el ){
-						el.CodeMirror.refresh();
-					} );
-				} )
+				// Refresh CodeMirror
+				$( '.CodeMirror' ).each( function( i, el ){
+					el.CodeMirror.refresh();
+				} );
 			} );
 		</script><?php
 	}
