@@ -2,7 +2,9 @@
 
 function mailchimp_object( $settings ) {
 
-	require_once $settings[ 'plugin_dir' ] . "providers/mailchimp/MailChimp.php";
+	if( ! class_exists( 'MailChimp' ) ) {
+		require_once $settings[ 'plugin_dir' ] . "providers/mailchimp/MailChimp.php";
+	}
 
 	$eoi_free = 'mailchimp' === K::get_var( 'provider', $settings ) ;
 	$suggested = array();
@@ -60,7 +62,9 @@ function mailchimp_ajax_get_lists() {
 
 		global $dh_easy_opt_ins_plugin;
 		$settings = $dh_easy_opt_ins_plugin->settings;
-		require_once $settings[ 'plugin_dir' ] . "providers/mailchimp/MailChimp.php";
+		if( ! class_exists( 'MailChimp' ) ) {
+			require_once $settings[ 'plugin_dir' ] . "providers/mailchimp/MailChimp.php";
+		}
 
 		$helper = new MailChimp( $api_key );
 		$lists = $helper->call( 'lists/list' );

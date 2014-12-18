@@ -7,14 +7,16 @@
 class EasyOptInsUpgrade {
     
     private $settings;
-    private $fca_maketing_page;
+    private $fca_maketing_page_left_menu;
+    private $fca_maketing_page_top_ad;
 
     public function __construct( $settings=null ) {
         
         global $pagenow;
         $this->settings = $settings;
         
-        $this->fca_maketing_page = 'http://fatcatapps.com/easyoptins?utm_campaign=eoi-top-ad&utm_source=eoi-free-mailchimp&utm_medium=referral';
+        $this->fca_maketing_page_left_menu = 'http://fatcatapps.com/easyoptins?utm_campaign=eoi-left-menu&utm_source=eoi-free-mailchimp&utm_medium=referral';
+        $this->fca_maketing_page_top_ad = 'http://fatcatapps.com/easyoptins?utm_campaign=eoi-top-ad&utm_source=eoi-free-mailchimp&utm_medium=referral';
         
         add_action( 'admin_menu', array( $this, 'fca_eoi_upgrade_to_premium_menu' ));
         add_action( 'admin_footer', array( $this,  'fca_eoi_upgrade_to_premium_menu_js' ));
@@ -33,7 +35,7 @@ class EasyOptInsUpgrade {
    
     function fca_eoi_upgrade_to_premium() {
         
-        wp_redirect( $this->fca_maketing_page, 301 );
+        wp_redirect( $this->fca_maketing_page_left_menu, 301 );
         exit();
       }
       
@@ -67,6 +69,6 @@ class EasyOptInsUpgrade {
     }
     
     function information_notice () {
-        echo '<div class="update-nag">' . sprintf( __( 'Easy Opt-ins Premium comes with lots of additional layouts, and various conversion increasing features. Special launch discount. <a href="%s" target="_blank">Learn more</a>' ), $this->fca_maketing_page ) . '</div>';
+        echo '<div class="update-nag">' . sprintf( __( 'Easy Opt-ins Premium comes with lots of additional layouts, and various conversion increasing features. Special launch discount. <a href="%s" target="_blank">Learn more</a>' ), $this->fca_maketing_page_top_ad ) . '</div>';
     }    
 }

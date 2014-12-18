@@ -17,10 +17,14 @@
 	margin: 1em !important;
 }
 .fca_eoi_postbox_1_inputs_wrapper {
-	border-bottom: solid 1px #DBDBDB;
 	border-top: solid 1px #DBDBDB;
-	margin: 1em;
-	padding: .5em 0;
+	margin: 1em 1em 0;
+	padding: .5em 0 0;
+}
+.fca_eoi_postbox_1_inputs_wrapper + p {
+	border-top: solid 1px #DBDBDB;
+	margin-top: .5em;
+	padding-top: 1em;
 }
 .fca_eoi_postbox_1_inputs_wrapper p {
 	margin: .5em 0 !important;
@@ -62,7 +66,8 @@
 }
 .fca_eoi_postbox_1_email_field_wrapper .fa,
 .fca_eoi_postbox_1_name_field_wrapper .fa {
-	width: 2em;
+	text-align: start;
+	width: 1.3em;
 }
 .fca_eoi_postbox_1_submit_button_wrapper {
 	text-align: center;

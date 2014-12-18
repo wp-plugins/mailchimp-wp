@@ -60,10 +60,11 @@ class EasyOptInsShortcodes {
 			$scss = new scssc();
 			$scss->setFormatter("scss_formatter_compressed");
 			$template = '<style>'
+				. '.fca_eoi_form p { width: auto; }'
 				. $scss->compile(
 					sprintf( '$ltr: %s;', is_rtl() ? 'false' : 'true' )
 					. '#fca_eoi_form_' . $atts[ 'id' ] . '{'
-					. 'input{max-width:9999px;}'
+					. 'input{ max-width: 9999px; }'
 					. file_get_contents( $layout_path . '/layout.css' )
 					. '}'
 				)
@@ -142,8 +143,7 @@ class EasyOptInsShortcodes {
 		);
 
 		// add the fca_eoi_alter_form             
-		$output = apply_filters(
-			'fca_eoi_alter_form'
+		$output = apply_filters( 'fca_eoi_alter_form'
 			, $output
 			, $fca_eoi_meta
 		);
