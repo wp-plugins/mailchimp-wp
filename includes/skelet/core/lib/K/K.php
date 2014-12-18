@@ -3,7 +3,7 @@
  * The k framework
  * 
  * @author Nabil Kadimi <nabil@kadimi.com>
- * @version 1.0.3
+ * @version 1.0.4
  * @package k_framework
  */
 class K {
@@ -139,10 +139,10 @@ class K {
 				$value,
 				str_replace( array( '[', ']' ), '_', $name ) . mt_rand( 100, 999 ),
 				array(
+					'editor_height' => K::get_var( 'editor_height', $args ),
 					'media_buttons' => K::get_var( 'media_buttons', $args, TRUE ),
 					'teeny' => K::get_var( 'teeny', $args ),
 					'textarea_name' => $name,
-					'editor_height' => K::get_var( 'editor_height', $args ),
 					'textarea_rows' => K::get_var( 'textarea_rows', $args, 20 ),
 				)
 			);
@@ -229,7 +229,7 @@ class K {
 				$label
 				, array(
 					'value' => $value,
-					'selected' => ( $value && in_array( $value, $selected ) ) 
+					'selected' => ( in_array( $value, $selected ) ) 
 						? 'selected'
 						: null
 					,
@@ -377,7 +377,7 @@ class K {
 	static function params_str( $params ) {
 		$params_str = '';
 		foreach( $params as $parameter => $value ) {
-			if( $value ) {
+			if( strlen( $value ) ) {
 				$params_str .= sprintf( ' %s="%s"', $parameter, $value);
 			}
 		}
@@ -385,15 +385,15 @@ class K {
 	}
 }
 
-add_action( 'k_admin_footer', 'k_scripts' );
+add_action( 'in_admin_footer', 'k_scripts' );
 function k_scripts() {
 	?>
 	<style>
 		fieldset.k {
-			border: solid 1px lightgray !important;
-			margin-bottom: 1em !important;
-			padding-left: .5em !important;
-			padding-right: .5em !important;
+			border: solid 1px lightgray;
+			margin-bottom: 1em;
+			padding-left: .5em;
+			padding-right: .5em;
 		}
 		fieldset.k legend {
 			background: white;
@@ -416,7 +416,7 @@ function k_scripts() {
 		}
 		fieldset.k.collapsed {
 			display: inline;
-			border: none !important;
+			border: none;
 		}
 	</style>
 	<script>
