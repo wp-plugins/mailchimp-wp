@@ -1,4 +1,4 @@
-=== Easy Opt-ins For Mailchimp - WordPress Plugin ===
+=== Easy Opt-ins For Mailchimp by Fatcat Apps===
 Contributors: davidhme, fatcatapps
 Donate link: http://fatcatapps.com/easyoptins?utm_campaign=eoi-description-cta&utm_source=eoi-free-mailchimp&utm_medium=referral
 Tags: mailchimp, mailchimp wordpress, mailchimp form, mailchimp widget, mailchimp plugin, mailchimp wordpress widget, mailchimp signup form, mailchimp signup widget, Fatcat Apps
@@ -7,11 +7,11 @@ Author URI: http://fatcatapps.com/
 Plugin URI: http://fatcatapps.com/eoi
 Requires at least: 3.9.1
 Tested up to: 4.0.1
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Integrate Mailchimp & WordPress Easily With This Plugin. Easy Opt-ins Makes It Super Simple To Create Beautiful Mailchimp Sign-up Widgets & Forms In Minutes.
+ The Easy Opt-ins For Mailchimp WordPress Plugin Makes It Super Simple To Create Beautiful Mailchimp Sign-up Widgets & Forms In Minutes.
 
 == Description ==
 
