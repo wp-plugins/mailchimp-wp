@@ -7,7 +7,7 @@ Author URI: http://fatcatapps.com/
 Plugin URI: http://fatcatapps.com/eoi
 Requires at least: 3.9.1
 Tested up to: 4.0.1
-Stable tag: 1.1.4
+Stable tag: 1.1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,6 +79,9 @@ You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 3. In your sidebar, select 'Opt In Forms -> Add New' to create a new table
 
 == Changelog ==
+
+= 1.1.4.1 =
+* Fixed a bug introduced in the previous version
 
 = 1.1.4 =
 * Fixed bugs introduced with 1.1.3
