@@ -81,9 +81,6 @@ You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 == Changelog ==
 
 = 1.1.4.1 =
-* Fixed a bug introduced in the previous version
-
-= 1.1.4 =
 * Fixed bugs introduced with 1.1.3
 
 = 1.1.3 =
