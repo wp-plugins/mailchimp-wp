@@ -215,9 +215,20 @@ function paf_print_option_type_textarea( $option_def ) {
 		$option[ 'description' ] = paf_option_return_dump( $option_id );
 	}
 
+	$style = '';
+	foreach( array( 'height', 'width' ) as $prop ) {
+		$style .= K::get_var( $prop, $option )
+			? sprintf( '%:%;', $prop, $option[ $prop ] )
+			: ''
+		;
+	}
+
 	K::textarea( 'paf[' . $option_id . ']'
 		, array(
-			'class' => K::get_var( 'class', $option, 'large-text' ),
+			'class' => K::get_var( 'cols', $option ) ? '' : 'large-text',
+			'cols' => K::get_var( 'cols', $option ),
+			'rows' => K::get_var( 'rows', $option ),
+			'style' => $style,
 			'data-paf-conditions' => K::get_var( 'conditions', $option )
 				? urlencode( json_encode( K::get_var( 'conditions', $option ), JSON_FORCE_OBJECT ) )
 				: null
@@ -252,8 +263,9 @@ function paf_print_option_type_select( $option_def ) {
 		$option[ 'description' ] = paf_option_return_dump( $option_id );
 	}
 
-	$is_radio = 'radio' === $option[ 'type'];
-	$is_checkbox = 'checkbox' === $option[ 'type'];
+	$is_radio = 'radio' === $option[ 'type' ];
+	$is_checkbox = 'checkbox' === $option[ 'type' ];
+	$is_select = 'select' === $option[ 'type' ];
 	$is_multiple = $is_checkbox || K::get_var( 'multiple', $option );
 
 	// Enqueue select 2
@@ -270,6 +282,9 @@ function paf_print_option_type_select( $option_def ) {
 			foreach ( $posts as $post ) {
 				$options[ $post->ID ] = $post->post_title;
 			}
+			if ( $is_select && ! $is_multiple ) {
+				$options = array( '' ) + $options;
+			}
 			break;
 		case 'terms':
 			$taxonomies = K::get_var( 'taxonomies', $option, 'category,post_tag,link_category,post_format' );
@@ -280,6 +295,9 @@ function paf_print_option_type_select( $option_def ) {
 			$terms = get_terms( $taxonomies, $args );
 			foreach ( $terms as $term ) {
 				$options[ $term->term_id ] = $term->name;
+			}
+			if ( $is_select && ! $is_multiple ) {
+				$options = array( '' ) + $options;
 			}
 			break;
 		default:
