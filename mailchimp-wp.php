@@ -4,7 +4,7 @@
     Plugin URI: http://fatcatapps.com/easyoptins
     Description: The Easy Opt-ins For Mailchimp WordPress Plugin Makes It Super Simple To Create Beautiful Mailchimp Sign-up Widgets & Forms In Minutes.
     Author: Fatcat Apps
-    Version: 1.1.3
+    Version: 1.1.4
     Author URI: http://http://fatcatapps.com/
 */
 
@@ -43,7 +43,7 @@ if ( ! class_exists ( 'scssc' ) ) {
 if( ! class_exists( 'DhEasyOptIns' ) ) {
 class DhEasyOptIns {
 
-    var $ver = '1.1.3';
+    var $ver = '1.1.4';
     var $shortcode = 'easy-opt-in';
     var $settings;
     var $provider = '';
