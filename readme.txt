@@ -80,6 +80,12 @@ You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 
 == Changelog ==
 
+= 1.1.3 =
+* CSS improvements
+* UI improvements
+* Fixed API conflicts
+* Fixed conflict with cherry plugin 
+
 = 1.1.2 =
 * Numerous CSS Fixes
 * Fixed issues with PHP5.2

@@ -7,7 +7,12 @@
 // Load the TinyMCE plugin
 add_filter( 'mce_external_plugins', 'skelet_add_tinyMCE_plugin' );
 function skelet_add_tinyMCE_plugin() {
-	return array( 'skelet' => site_url( '?skelet=tinyMCE_js' ) );
+
+	global $paf_shortcodes;
+
+	if( $paf_shortcodes ) {
+		return array( 'skelet' => site_url( '?skelet=tinyMCE_js' ) );
+	}
 }
 
 // Add endpoints
@@ -75,17 +80,16 @@ function skelet_tinyMCE_php( $tag ) {
 	$select2_enqueued = false;
 	$protocol = is_ssl() ? 'https' : 'http';
 
-	ob_start();
-
 	// Head
 	printf( '<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title></title>' );
 
 	// CSS
 	printf( '<link rel="stylesheet" href="%s" />', admin_url( 'css/common' . ( is_rtl() ? '-rtl' : '' ) . '.css' ) );
 	printf( '<link rel="stylesheet" href="%s" />', admin_url( 'css/forms' . ( is_rtl() ? '-rtl' : '' ) . '.css' ) );
-	printf( '<link rel="stylesheet" href="%s" />', site_url( 'wp-includes/css/dashicons' . ( is_rtl() ? '-rtl' : '' ) . '.css' ) );
-	printf( '<link rel="stylesheet" href="%s" />', site_url( 'wp-includes/css/buttons' . ( is_rtl() ? '-rtl' : '' ) . '.css' ) );
+	printf( '<link rel="stylesheet" href="%s" />', site_url( 'wp-includes/css/dashicons' . ( is_rtl() ? '-rtl' : '' ) . '.min.css' ) );
+	printf( '<link rel="stylesheet" href="%s" />', site_url( 'wp-includes/css/buttons' . ( is_rtl() ? '-rtl' : '' ) . '.min.css' ) );
 	print( '<style>body { height: auto; margin: 0; min-width: 0; padding: 1em; }</style>' );
+
 	paf_asset_css( 'paf' );
 
 	// JS
@@ -93,6 +97,8 @@ function skelet_tinyMCE_php( $tag ) {
 	printf( '<script src="%s"></script>', "$protocol://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/1.2.0/jquery.serializeJSON.min.js" );
 
 	paf_asset_js( 'paf' );
+
+	ob_start();
 	?>
 	<script>
 		var paf;
@@ -124,6 +130,10 @@ function skelet_tinyMCE_php( $tag ) {
 				shortcode = '';
 				paf = $( this ).serializeJSON().paf;
 				content = $( '#content' ).val();
+
+				if( 'undefined' === typeof paf ) {
+					paf = {};
+				}
 
 				// Build the shortcode
 				Object.keys( paf ).map( function(v) {
@@ -158,6 +168,7 @@ function skelet_tinyMCE_php( $tag ) {
 		} );
 	</script>
 	<?php
+	print( JSMin::minify( ob_get_clean() ) );
 
 	// Close head
 	print( '</head><body class="wp-core-ui">' );
@@ -219,7 +230,7 @@ function skelet_tinyMCE_php( $tag ) {
 // Output for "skelet/tinyMCE.js"
 function skelet_tinyMCE_js() {
 	global $paf_shortcodes;
-	$minify = false;
+	$minify = true;
 
 	// Prepare a shortcodes object for JavaScript
 	$shortcodes = $paf_shortcodes;
@@ -258,168 +269,152 @@ function skelet_tinyMCE_js() {
 	/*<script>*/
 	(function () {
 
-		var $ = jQuery;
-		var shortcodes = <?php echo json_encode( $shortcodes, JSON_FORCE_OBJECT ); ?>;
+		var i
+			, $ = jQuery
+			, s
+			, shortcodes = <?php echo json_encode( $shortcodes, JSON_FORCE_OBJECT ); ?>
+			, shortcodes_handlers = []
+		;
+
+		function createShortcodeHandler( tag ) {
+			var s = shortcodes[ tag ];
+
+			switch ( s._type ) {
+			case 'basic' :
+				return function() {
+
+					var ed = tinymce.activeEditor
+						, tag_end
+						, tag_start
+					;
+
+					tag_end = '[/tag]'.replace( 'tag', tag );
+					tag_start = '[tag]'.replace( 'tag', tag );
+
+					/* Wrap or replace */
+					ed.selection.setContent( s.wrap
+						? tag_start + ed.selection.getContent() + tag_end
+						: tag_start
+					);
+				};
+			case 'modal' :
+				return function() {
+
+					var ed = tinymce.activeEditor
+						, $w = $( window )
+						, h = ( 'undefined' !== s.height && s.height && s.height <= 1 )
+							? $w.height() * s.height
+							: $w.height() * 0.5
+						, w = ( 'undefined' !== s.width && s.width && s.width <= 1 )
+						? $w.width() * s.width
+						: $w.width() * 0.5
+					;
+
+					ed.windowManager.open( {
+						title: s.title,
+						text: s.text,
+						url: '<?php echo site_url( "?skelet=tinyMCE_php&tag=" ); ?>' + tag,
+						width: w,
+						height: h
+					} );
+				};
+			}
+		}
+
+		/**
+		 * Define shortcode handlers here
+		 * 
+		 * This is a solution to the closure loops infamous issue
+		 */
+		for ( tag in shortcodes ) {
+			
+			s = shortcodes[ tag ];
+
+			/* Skip menus since they don't have functions */
+			if( [ 'basic', 'modal' ].indexOf( s._type ) == -1 ) {
+				continue;
+			}
+
+			shortcodes_handlers[ tag ] = createShortcodeHandler( tag );
+		}
 
 		/* Register the buttons */
 		tinymce.create('tinymce.plugins.skelet', {
 			init : function(ed, url) {
 
+				/* Gets sub_items recursively in a format compatible with tinyMCE */
 				var getMenuItems = function( _parent ) {
 
 					var items = [];
 					var s;
 
-					for ( var i in shortcodes ) {
+					/* Loop all, non-children are skipped inside */
+					for ( var tag in shortcodes ) {
 
-						s = shortcodes[ i ];
-						tag = i;
-
-						// Skip non-related items
+						s = shortcodes[ tag ];
+						
+						/* Skip non-children */
 						if( 'undefined' === typeof s.isChildOf || s.isChildOf !== _parent ) {
 							continue;
 						}
 
+						/* Get item */
 						switch ( s._type ) {
-						case 'basic' :
-
-							/* Add basic shortcode */
-							s.onclick = function() {
-
-								var tag_start, tag_end;
-								tag_start = '[tag]'.replace( 'tag', tag );
-								tag_end = '[/tag]'.replace( 'tag', tag );
-
-								/* Wrap or replace */
-								ed.selection.setContent( s.wrap
-									? tag_start + ed.selection.getContent() + tag_end
-									: tag_start
-								);
-							};
-							items.push( s );
-							break;
 						case 'menu' :
-
-							/* Add menu */
 							s.menu = getMenuItems( tag );
-							items.push( s );
 							break;
+						case 'basic' :
 						case 'modal' :
-							/* Trigger modal window */
-							s.onclick = function() {
-
-								var $w = $( window );
-								var h = ( 'undefined' !== typeof( s.height ) && s.height && s.height <= 1 )
-									? $w.height() * s.height
-									: $w.height() * .5
-								;
-
-								var w = ( 'undefined' !== typeof( s.width ) && s.width && s.width <= 1 )
-									? $w.width() * s.width
-									: $w.width() * .5
-								;
-
-								ed.windowManager.open( {
-									title: s.title,
-									text: s.text,
-									url: '<?php echo site_url( "?skelet=tinyMCE_php&tag=" ); ?>' + tag,
-									width: w,
-									height: h
-								} );
-							};
-							items.push( s );
-							break;
+							s.onclick = shortcodes_handlers [ tag ];
 						}
-					};
 
-					console.log( items );
+						/* Add item to array */
+						items.push( s );
+					}
+
 					return items;
-				}
+				};
 
+				/* Adds button to tinyMCE toolbar */
 				var addControl = function( tag ) {
 
 					var s = shortcodes[ tag ];
 
 					if ( s.isChildOf ) {
 
-						/* Skip children in top level */
+						/* Skip non-top-level elements, those are added by there parents */
 						return;
 					}
 
-					// Add the control
+					/* Get the control parameters */
 					switch ( s._type ) {
-					case 'basic' :
-
-						/* Add basic shortcode */
-						s.onclick = function() {
-
-							var tag_start, tag_end;
-							tag_start = '[tag]'.replace( 'tag', tag );
-							tag_end = '[/tag]'.replace( 'tag', tag );
-
-							/* Wrap or replace */
-							ed.selection.setContent( s.wrap
-								? tag_start + ed.selection.getContent() + tag_end
-								: tag_start
-							);
-						};
-						break;
 					case 'menu' :
-
-						/* Add menu */
 						s.menu = getMenuItems( tag );
-
 						s.type = 'menubutton';
-						ed.addButton( tag, s );
 						break;
+					case 'basic' :
 					case 'modal' :
-
-						/* Trigger modal window */
-						s.onclick = function() {
-
-							var $w = $( window );
-							var h = ( 'undefined' !== typeof( s.height ) && s.height && s.height <= 1 )
-								? $w.height() * s.height
-								: $w.height() * .5
-							;
-
-							var w = ( 'undefined' !== typeof( s.width ) && s.width && s.width <= 1 )
-								? $w.width() * s.width
-								: $w.width() * .5
-							;
-
-							ed.windowManager.open( {
-								title: s.title,
-								text: s.text,
-								url: '<?php echo site_url( "?skelet=tinyMCE_php&tag=" ); ?>' + tag,
-								width: w,
-								height: h
-							} );
-						};
-						break;
+						s.onclick = shortcodes_handlers [ tag ];
 					}
-					return ed.addButton( tag, s );
-				}
 
+					/* Add the control */
+					return ed.addButton( tag, s );
+				};
+
+				/* Loops through the object defining the shortcodes and add them */
 				for( var tag in shortcodes ) {
 
 					addControl( tag );
 				}
 			}
 		});
-		/* Start the buttons */
+		/* Add buttons */
 		tinymce.PluginManager.add( 'skelet', tinymce.plugins.skelet );
 	})();<?php
 
 	return empty( $minify )
 		? ob_get_clean()
-		: trim(
-			preg_replace( '#\s+#', ' ',                // Removes multiple spaces
-				preg_replace( '#\/\*([^*])*\*\/#', '', // Removes comments like /* ... */
-					ob_get_clean()
-				)
-			)
-		)
+		: JSMin::minify( ob_get_clean() )
 	;
 }
 

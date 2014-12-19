@@ -24,6 +24,18 @@ if ( ! class_exists( 'K' ) ) {
 }
 
 /**
+ * Load JSMin and CSSmin
+ */
+if ( ! class_exists( 'JSMin' ) ) {
+
+	require dirname( __FILE__ ) . '/lib/JSMin.php';
+}
+if ( ! class_exists( 'CSSmin' ) ) {
+
+	require dirname( __FILE__ ) . '/lib/CSSmin.php';
+}
+
+/**
  * Include core files
  */
 foreach ( array( 'pages', 'options', 'shortcodes' ) as $core_file_name ) {
@@ -63,6 +75,7 @@ add_action( 'admin_init', 'paf_enqueue' );
  *  - paf_page_tabs
  *  - paf_page_options
  *  - paf_page_sections
+ *  - paf_page_shortcodes
  *  - paf_page
  *  - paf_tab
  */
@@ -71,10 +84,10 @@ function paf_load() {
 	global $paf;
 	$paf = get_option( 'paf', array() );
 
-	global $paf_options, $paf_pages, $paf_sections, $paf_tabs;
+	global $paf_options, $paf_pages, $paf_sections, $paf_shortcodes, $paf_tabs;
 
 	// Make sure $GLOBALS[ 'paf_...' ] exist
-	foreach ( array( 'paf_options', 'paf_pages', 'paf_sections', 'paf_tabs' ) as $k ) {
+	foreach ( array( 'paf_options', 'paf_pages', 'paf_sections', 'paf_shortcodes', 'paf_tabs' ) as $k ) {
 		if( empty( $GLOBALS[ $k ] ) ) {
 			$GLOBALS[ $k ] = array();
 		}
@@ -128,8 +141,8 @@ function paf_load() {
 	}
 
 	// Get defined page and tab sections
-	reset( $paf_options );
-	foreach ( $paf_options as $id => $paf_option ) {
+	reset( $paf_page_options );
+	foreach ( $paf_page_options as $id => $paf_option ) {
 		if ( K::get_var( 'section', $paf_option ) ) {
 			$paf_page_sections[ $paf_option[ 'section' ] ] = K::get_var( $paf_option[ 'section' ], $paf_sections, array() );
 		}
@@ -314,13 +327,28 @@ function paf_asset( $asset, $type, $block = FALSE ) {
 		$blocked[] = "$type/$asset";
 	}
 
-	// Print asset
+	// Get source
 	$src = dirname( __FILE__) . "/../assets/$type/$asset.$type";
-	printf( '<%s>%s</%s>'
+	$o = file_get_contents( $src );
+
+	// Minify source
+	switch ( $type ) {
+	case 'css':
+		$CSSmin = new CSSmin();
+		$o = $CSSmin->run( $o );
+	case 'js':
+		$o = JSMin::minify( $o );
+	}
+
+	// Wrap in tags
+	$o = sprintf( '<%s>%s</%s>'
 		, 'css' === $type ? 'style' : 'script'
-		, file_get_contents( $src )
+		, $o
 		, 'css' === $type ? 'style' : 'script'
 	);
+
+	// Output
+	print( $o );
 }
 
 function paf_url() {
