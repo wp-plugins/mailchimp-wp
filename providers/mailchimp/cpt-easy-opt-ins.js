@@ -69,4 +69,21 @@ jQuery( document ).ready( function( $ ) {
 			;
 		}
 	}
+        
+       // toggle send_opt_int_bait fearure once mailchimp double opt in is selected
+       $( 'select[name="fca_eoi[mailchimp_double_opt_in]"]' ).select2().on("change", function(e) {
+//          if( $( 'select[name="fca_eoi[mailchimp_double_opt_in]"]' ).val() == 'false' ) {
+//              $( 'input[name="fca_eoi[is_send_opt_int_bait]"]' ).prop('checked', true); 
+//          } else {
+              $( 'input[name="fca_eoi[is_send_opt_int_bait]"]' ).prop('checked', false); 
+//          }
+        });
+       // toggle mailchimp double opt in fearure once  send_opt_int_bait is selected 
+      $( 'input[name="fca_eoi[is_send_opt_int_bait]"]' ).on('click', function(e) {
+          if( $( 'input[name="fca_eoi[is_send_opt_int_bait]"]' ).is(":checked") ) {
+              $( 'select[name="fca_eoi[mailchimp_double_opt_in]"]' ).select2('val', 'false'); 
+          } else {
+              $(  'select[name="fca_eoi[mailchimp_double_opt_in]"]' ).select2('val', 'true');  
+          }
+        }); 
 } );

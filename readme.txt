@@ -1,31 +1,36 @@
-=== Easy Opt-ins For Mailchimp by Fatcat Apps===
+=== Mailchimp Optin Cat by Fatcat Apps===
 Contributors: davidhme, fatcatapps
-Donate link: http://fatcatapps.com/easyoptins?utm_campaign=eoi-description-cta&utm_source=eoi-free-mailchimp&utm_medium=referral
-Tags: mailchimp, mailchimp wordpress, mailchimp form, mailchimp widget, mailchimp plugin, mailchimp wordpress widget, mailchimp signup form, mailchimp signup widget, Fatcat Apps
+Donate link: https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
+Tags: mailchimp, mailchimp wordpress, mailchimp form, mailchimp widget, mailchimp plugin, mailchimp wordpress widget, popup, lightbox popup, mailchimp signup widget, Fatcat Apps
 
-Author URI: http://fatcatapps.com/
-Plugin URI: http://fatcatapps.com/eoi
+Author URI: https://fatcatapps.com/
+Plugin URI: https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
 Requires at least: 3.9.1
-Tested up to: 4.0.1
-Stable tag: 1.1.4.1
+Tested up to: 4.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
- The Easy Opt-ins For Mailchimp WordPress Plugin Makes It Super Simple To Create Beautiful Mailchimp Sign-up Widgets & Forms In Minutes.
+ The Mailchimp Optin Cat WordPress Plugin Makes It Super Simple To Create Beautiful Mailchimp Sign-up Widgets & Forms In Minutes.
 
 == Description ==
 
-= Easy Opt-ins For Mailchimp WordPress Plugin =
+= Mailchimp Optin Cat WordPress Plugin =
 
-The **Easy Opt-ins For Mailchimp** WordPress Plugin makes it easy to create highly convereting Mailchimp sign-up and opt-in forms in less than two minutes. You can publish your Mailchimp signup form as a sidebar widget or as a post box.
+The **Mailchimp Optin Cat** WordPress Plugin makes it easy to create highly convereting Mailchimp sign-up and opt-in forms in less than two minutes. You can publish your Mailchimp signup form as a sidebar widget or as a post box.
+
+[youtube https://www.youtube.com/watch?v=9d3HPWbbn58]
 
 = Opt-in Types =
 
 *   Post boxes. Post boxes are opt-in forms specifically built to be included inside of a post or page. You can add them using shortcodes, or you can automatically append them to the posts/categories/pages of your choice.
 *   Sidebar widgets. Our Mailchimp widgets make it easy to add opt-in forms to your sidebar.
+*   Popups. Capture more email optins with our Mailchimp Optin Popup Feature.
 
-= Features =
+= More Features =
 
+*   Trigger Popup based on time spent on page.
+*   Determine Popup Frequency: On every pageview, Once per visit, Once per day, Once per month, Only once.
 *   Mailchimp opt-in form works with responsive sites.
 *   Intuitive User Interface.
 *	Customize your Mailchimp sign-up form: change copy, font-size, colors and more.
@@ -39,30 +44,30 @@ The **Easy Opt-ins For Mailchimp** WordPress Plugin makes it easy to create high
 *   Easily customize your Mailchimp forms using CSS.
 *   Use our "No CSS" layout if you want to inherit your themes' form styling.
 
+
+> #### Optin Cat Premium
+> Optin Cat Premium comes with the following features.<br />
+>
+> Lots Of Additional Beatiful Layout & Design Options.<br />
+> Advanced Popup Targeteting: Number of pageviews during this visit, Scrolled down on current page (%), Only show on specific posts/pages/categories, Never show on specific posts/pages/categories.<br />
+> Two Step Optin Feature: Trigger a Popup Optin Form after the user clicks on a hyperlink.<br />
+> Mailchimp single opt-in via API.<br />
+> Priority Email Support.<br />
+>
+> [Learn more about Optin Cat Premium >>](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral)
+
 = Roadmap =
 
-We've got a bunch of feature ideas, such as more opt-in form designs and various types of Mailchimp signup forms (other than post boxes sidebar widgets). We'd love to hear your suggestions, feel free to share them in the support forum.
+We've got a bunch of feature ideas, such as more opt-in form designs and various types of Mailchimp signup forms (other than popups, post boxes sidebar widgets). We'd love to hear your suggestions, feel free to share them in the support forum.
 
 = Requirements =
 
 You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 
-> #### Easy Opt-ins Premium
-> Easy Opt-ins comes with the following features.<br />
->
-> 4 Additional Gorgeous Layouts.<br />
-> Mailchimp single opt-in via API.<br />
-> Sticky sidebar widget.<br />
-> Priority Support.<br />
->
-> [Learn more about Easy Opt-ins Premium >>](http://fatcatapps.com/easyoptins?utm_campaign=eoi-description-cta&utm_source=eoi-free-mailchimp&utm_medium=referral)
-
 = Relevant Links =
 
-*   [Live demo](http://demo.fatcatapps.com/easyoptins/)
 *   [FatcatApps.com](http://fatcatapps.com/)
 *	[Other plugins by FatcatApps](https://profiles.wordpress.org/fatcatapps/#content-plugins)
-*	[FatcatApps founder, David Hehenberger, on Twitter](https://twitter.com/davidhme)
 
 == Screenshots ==
 
@@ -76,11 +81,18 @@ You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 
 1. Upload the plugin to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. In your sidebar, select 'Opt In Forms -> Add New' to create a new table
+3. In your sidebar, select 'Optin Cat -> Add New' to create a new table
 
 == Changelog ==
 
-= 1.1.4.1 =
+= 1.2 =
+* Renamed plugin to Optin Cat
+* Added new layout
+* Added Popup Feature
+* Numerous Bugfixes
+* Numerous User Interface Improvements
+
+= 1.1.4 =
 * Fixed bugs introduced with 1.1.3
 
 = 1.1.3 =
