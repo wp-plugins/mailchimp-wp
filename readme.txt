@@ -6,8 +6,8 @@ Tags: mailchimp, mailchimp wordpress, mailchimp form, mailchimp widget, mailchim
 Author URI: https://fatcatapps.com/
 Plugin URI: https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
 Requires at least: 3.9.1
-Tested up to: 4.1
-Stable tag: 1.2
+Tested up to: 4.1.1
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,32 +85,37 @@ You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 
 == Changelog ==
 
-= 1.2 =
+= MailChimp Forms by Optin Cat 1.2.1 =
+* Bugfix: "Quick edit" disappears on pages
+* Improved performance / loadspeed of popup feature
+* Improved performance of WP backend
+
+= MailChimp Forms by Optin Cat 1.2 =
 * Renamed plugin to Optin Cat
 * Added new layout
 * Added Popup Feature
 * Numerous Bugfixes
 * Numerous User Interface Improvements
 
-= 1.1.4 =
+= MailChimp Forms by Optin Cat 1.1.4 =
 * Fixed bugs introduced with 1.1.3
 
-= 1.1.3 =
+= MailChimp Forms by Optin Cat 1.1.3 =
 * CSS improvements
 * UI improvements
 * Fixed API conflicts
 * Fixed conflict with cherry plugin 
 
-= 1.1.2 =
+= MailChimp Forms by Optin Cat 1.1.2 =
 * Numerous CSS Fixes
 * Fixed issues with PHP5.2
 * Confirmed compatibility with WordPress 4.0.1
 * Added Easy Opt-ins Premium banner
 
-= 1.1.1 =
+= MailChimp Forms by Optin Cat 1.1.1 =
 * Fixed an issue that was introduced with v1.1
 
-= 1.1 =
+= MailChimp Forms by Optin Cat 1.1 =
 * Added new opt-in type: Post Boxes which can be published using shortcodes.
 * Added 2 new widget layouts.
 * Added 2 new post box layouts.
@@ -118,23 +123,23 @@ You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 * Added "No CSS" layouts.
 * Lots of UI improvements.
 
-= 1.0.4 =
+= MailChimp Forms by Optin Cat 1.0.4 =
 * Updated readme.txt.
 * Updated Mailchimp API integration
 
-= 1.0.3 =
+= MailChimp Forms by Optin Cat 1.0.3 =
 * Added screenshots
 
-= 1.0.2 =
+= MailChimp Forms by Optin Cat 1.0.2 =
 * Updated readme.txt.
 
-= 1.0.1 =
+= MailChimp Forms by Optin Cat 1.0.1 =
 * Added "Tested up to: 4.0"
 
-= 1.0 =
+= MailChimp Forms by Optin Cat 1.0 =
 * Initial release
 
-= 0.9 =
+= MailChimp Forms by Optin Cat 0.9 =
 * Beta release
 
 
