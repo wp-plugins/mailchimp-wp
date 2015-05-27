@@ -1,81 +1,78 @@
-=== Mailchimp Optin Cat by Fatcat Apps===
-Contributors: davidhme, fatcatapps
+=== MailChimp Forms by Optin Cat ===
+Contributors: Mailchimp Forms by Optin Cat, davidhme, fatcatapps
 Donate link: https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
 Tags: mailchimp, mailchimp wordpress, mailchimp form, mailchimp widget, mailchimp plugin, mailchimp wordpress widget, popup, lightbox popup, mailchimp signup widget, Fatcat Apps
 
 Author URI: https://fatcatapps.com/
 Plugin URI: https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
 Requires at least: 3.9.1
-Tested up to: 4.1.1
-Stable tag: 1.2.1
+Tested up to: 4.2.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
- The Mailchimp Optin Cat WordPress Plugin Makes It Super Simple To Create Beautiful Mailchimp Sign-up Widgets & Forms In Minutes.
+The MailChimp Forms by Optin Cat WordPress Plugin Makes It Super Simple To Create Beautiful MailChimp Sign-up Widgets & Forms In Minutes.
 
 == Description ==
 
-= Mailchimp Optin Cat WordPress Plugin =
+= MailChimp Optin Cat WordPress Plugin =
 
-The **Mailchimp Optin Cat** WordPress Plugin makes it easy to create highly convereting Mailchimp sign-up and opt-in forms in less than two minutes. You can publish your Mailchimp signup form as a sidebar widget or as a post box.
+**MailChimp Forms by Optin Cat** is a super-fast tool that lets you build beautiful looking MailChimp forms to maximize conversions and grow your mailing list.
 
-[youtube https://www.youtube.com/watch?v=9d3HPWbbn58]
+In just two minutes, you can build a MailChimp form that is fully optimized and customized to fit your theme's design.
 
-= Opt-in Types =
+= MailChimp Forms by Optin Cat – Optin Types =
 
-*   Post boxes. Post boxes are opt-in forms specifically built to be included inside of a post or page. You can add them using shortcodes, or you can automatically append them to the posts/categories/pages of your choice.
-*   Sidebar widgets. Our Mailchimp widgets make it easy to add opt-in forms to your sidebar.
-*   Popups. Capture more email optins with our Mailchimp Optin Popup Feature.
+MailChimp Forms by Optin Cat allows you to build a range of MailChimp forms to. These include:
 
-= More Features =
+*   MailChimp post boxes – MailChimp forms that you can add to your various posts or pages
+*   MailChimp sidebar widgets – Widgets that will sit in your sidebar so that they're present across your entire site
+*   MailChimp lightbox pop-ups – Pop-up forms that appear over the top of your content and allow your visitors to put in their details that way
 
-*   Trigger Popup based on time spent on page.
-*   Determine Popup Frequency: On every pageview, Once per visit, Once per day, Once per month, Only once.
-*   Mailchimp opt-in form works with responsive sites.
-*   Intuitive User Interface.
-*	Customize your Mailchimp sign-up form: change copy, font-size, colors and more.
-*	Beatiful Mailchimp opt-in form designs built for conversions.
-*	Build unlimited Mailchimp forms.
-*	Smart form validation.
-*	Redirect users to a "Thank You"-page after submitting a form..
+You'll also be able to create an *unlimited number of these forms for your site*.
 
-= Developer Friendly =
+= MailChimp Forms by Optin Cat - Features =
 
-*   Easily customize your Mailchimp forms using CSS.
-*   Use our "No CSS" layout if you want to inherit your themes' form styling.
+Here are some other cool features that MailChimp Forms by Optin Cat comes with
 
+*   Responsive design. Your MailChimp forms will never look out of place, no matter which device your visitors are using.
+*   Post boxes can be added with a shortcode or automatically at the bottom of posts/pages.
+*   Lots of customization options. Choose between font sizes, colors and more.
+*   Intuitive and elegant interface that keeps things quick and easy.
+*   Analytics feature let's you know which MailChimp forms work and which ones don't.
+*   Conversion optimization best practices built-in – MailChimp Forms by Optin Cat is the work of experienced marketers who know what makes people convert.
 
-> #### Optin Cat Premium
-> Optin Cat Premium comes with the following features.<br />
->
-> Lots Of Additional Beatiful Layout & Design Options.<br />
-> Advanced Popup Targeteting: Number of pageviews during this visit, Scrolled down on current page (%), Only show on specific posts/pages/categories, Never show on specific posts/pages/categories.<br />
-> Two Step Optin Feature: Trigger a Popup Optin Form after the user clicks on a hyperlink.<br />
-> Mailchimp single opt-in via API.<br />
-> Priority Email Support.<br />
->
-> [Learn more about Optin Cat Premium >>](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral)
+In no time you'll be creating amazing MailChimp newsletter forms that never let you down and that capture thousands of e-mails.
 
-= Roadmap =
-
-We've got a bunch of feature ideas, such as more opt-in form designs and various types of Mailchimp signup forms (other than popups, post boxes sidebar widgets). We'd love to hear your suggestions, feel free to share them in the support forum.
+= Why bother? =
+Your MailChimp list is one of your most important assets, no matter if you're a blogger, marketer or small business owner. Rely on MailChimp Forms by Optin Cat to build great looking forms that convert.
 
 = Requirements =
+You'll need a self-hosted WordPress.org site and a MailChimp account - [sign up for a free MailChimp account here](http://mailchimp.com/). Integration is fast and seamless, no coding skills required.
 
-You'll need a Mailchimp account and Mailchimp API key to use this plugin.
+> #### Optin Cat Premium
+> MailChimp Forms by Optin Cat Premium hels you grow your list with the following features:<br />
+> Mobile MailChimp popups.<br />
+> Smart Popup Targeting.<br />
+> MailChimp single optin.<br />
+> Lots Of Additional Beatiful Layout & Design Options.<br />
+> Two Step Optin Feature: Trigger a Mailchimp Popup Optin Form after the user clicks on a hyperlink.<br />
+> Offers Feature: Send optin baits & content upgrades straight from your WordPress backend.<br />
+> Exit Intervention: Display popups when the user is about to leave your site.<br />
+> Priority Email Support.<br />
+>
+>
+> [Learn more about MailChimp Forms by Optin Cat Premium >>](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral)
 
-= Relevant Links =
 
-*   [FatcatApps.com](http://fatcatapps.com/)
-*	[Other plugins by FatcatApps](https://profiles.wordpress.org/fatcatapps/#content-plugins)
 
 == Screenshots ==
 
-1. The Mailchimp Opt-in Form Builder
-2. The Form on a live website
-3. Built-in form validation
-4. Another layout
-5. Our Post box
+1. The MailChimp Opt-in Form Builder
+2. Built-in MailChimp form validation
+3. MailChimp Post Box
+4. MailChimp Popup
+5. Another MailChimp Post Box (part of Optin Cat Premium)
 
 == Installation ==
 
@@ -83,9 +80,31 @@ You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. In your sidebar, select 'Optin Cat -> Add New' to create a new table
 
+== About MailChimp ==
+
+[MailChimp](http://mailchimp.com/) is currently used by more than seven million businesses and people throughout the world. The features and integrations of MailChimp allow you to send out automated messages, marketing emails, as well as different targeted campaigns. 
+
+MailChimp has been in business since the year 2001. Since that time MailChimp has grown and now there are more than 500 million emails sent through MailChimp each day. 
+
+MailChimp is a simple EMS (email marketing software) that will provide you with a number of different options for saving templates, designing new templates, and sending emails. There are a number of different possible options as well as an easy to use interface that sets MailChimp apart from all of the other types of software. You can see this with the number of people who are using this software. More than a million MailChimp users cannot be wrong. 
+
+If you are creating any type of newsletter, MailChimp can help. Not only can you create your newsletters using MailChimp, but you can also use different options for sharing them on each of your social networks. This makes MailChimp your own personal platform to create, design, and publish each of your newsletters. 
+
+With MailChimp you will be able to build a list of people that you want to target and send your marketing products to. You can even save this list using MailChimp so that you can use it at a later point in time. In addition, MailChimp allows you to create and customize templates so that you can use them for each of your products. 
+
+If you have been looking for the best email marketing software programs, look no further than MailChimp. This is truly an EMS program that will allow you to do everything that you need to. The pricing scheme is affordable, making MailChimp perfect for any size company large or small. 
+
 == Changelog ==
 
-= MailChimp Forms by Optin Cat 1.2.1 =
+= MailChimp Forms by Optin Cat 1.3 =
+* Added Analytics feature
+* Added tinyMCE button to WP Post editor
+* Improved Optin Editor UI
+* Various minor bugfixes
+* Added the ability to customize error text
+* Fixed a bug that displayed not-mobile friendly popups on some mobile devices
+
+= MailChimp Forms by Optin Cat 1.2.2 =
 * Bugfix: "Quick edit" disappears on pages
 * Improved performance / loadspeed of popup feature
 * Improved performance of WP backend
@@ -93,7 +112,7 @@ You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 = MailChimp Forms by Optin Cat 1.2 =
 * Renamed plugin to Optin Cat
 * Added new layout
-* Added Popup Feature
+* Added MailChimp Popup Feature
 * Numerous Bugfixes
 * Numerous User Interface Improvements
 
@@ -125,7 +144,7 @@ You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 
 = MailChimp Forms by Optin Cat 1.0.4 =
 * Updated readme.txt.
-* Updated Mailchimp API integration
+* Updated MailChimp API integration
 
 = MailChimp Forms by Optin Cat 1.0.3 =
 * Added screenshots
@@ -141,10 +160,3 @@ You'll need a Mailchimp account and Mailchimp API key to use this plugin.
 
 = MailChimp Forms by Optin Cat 0.9 =
 * Beta release
-
-
-== Upgrade Notice ==
-
-
-
-`<?php code(); // goes in backticks ?>`

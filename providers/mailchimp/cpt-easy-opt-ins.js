@@ -7,27 +7,28 @@ jQuery( document ).ready( function( $ ) {
             
 	mailchimp_toggle_fields();
 
-	// Track value to prevent duplicate AJAX request
-	$api_key.data( 'value', $api_key.val() );
+	fca_eoi_provider_status_setup( 'mailchimp', $api_key );
 
 	$api_key.change( function() {
+		if ( ! fca_eoi_provider_is_value_changed( $( this ) ) ) {
+			return;
+		}
 
-		var $this = $( this );
+		fca_eoi_provider_status_set( 'mailchimp', fca_eoi_provider_status_codes.loading );
+
 		var data = {
 			'action': 'fca_eoi_mailchimp_get_lists', /* API action name, do not change */
 			'mailchimp_api_key' : $api_key.val()
 		};
 
-		// Did the value really change
-		if ( $this.val() == $api_key.data( 'value' ) ) {
-			return;
-		} else {
-			$api_key.data( 'value', $this.val() );
-		}
-
 		$.post( ajaxurl, data, function( response ) {
 
 			var lists = JSON.parse( response );
+
+			fca_eoi_provider_status_set( 'mailchimp', Object.keys(lists).length > 1
+				? fca_eoi_provider_status_codes.ok
+				: fca_eoi_provider_status_codes.error );
+
 			var $lists = $( '<select class="select2" style="width: 27em;" name="fca_eoi[mailchimp_list_id]" >' );
 
 			for ( list_id in lists ) {
