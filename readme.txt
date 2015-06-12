@@ -7,7 +7,7 @@ Author URI: https://fatcatapps.com/
 Plugin URI: https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
 Requires at least: 3.9.1
 Tested up to: 4.2.2
-Stable tag: 1.3
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,8 @@ The MailChimp Forms by Optin Cat WordPress Plugin Makes It Super Simple To Creat
 **MailChimp Forms by Optin Cat** is a super-fast tool that lets you build beautiful looking MailChimp forms to maximize conversions and grow your mailing list.
 
 In just two minutes, you can build a MailChimp form that is fully optimized and customized to fit your theme's design.
+
+[youtube https://www.youtube.com/watch?v=RjdDSrkupcQ]
 
 = MailChimp Forms by Optin Cat – Optin Types =
 
@@ -68,19 +70,189 @@ You'll need a self-hosted WordPress.org site and a MailChimp account - [sign up 
 
 == Screenshots ==
 
-1. The MailChimp Opt-in Form Builder
-2. Built-in MailChimp form validation
+1. Examples of the MailChimp form designs
+2. The MailChimp Opt-in Form Builder
 3. MailChimp Post Box
 4. MailChimp Popup
-5. Another MailChimp Post Box (part of Optin Cat Premium)
+5. Another MailChimp Post Box
+6. MailChimp Form Analytics
+7. The entire settings screen
 
 == Installation ==
 
 1. Upload the plugin to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. In your sidebar, select 'Optin Cat -> Add New' to create a new table
+3. In your sidebar, select 'Optin Cat -> Add New' to create a new MailChimp form.
+4. Choose Sidebar Widget, Post Box or Popup - MailChimp form
+
+== FAQ ==
+
+= Do I need a MailChimp account? =
+Yes, you need a MailChimp account. [You can sign up for a free MailChimp account here](http://mailchimp.com/).
+
+= Do I need to set up a list in MailChimp to use this plugin? =
+Yes, you'll need to set up at least one MailChimp list.
+
+= How to integrate this plugin with MailChimp? =
+1. Go to your Dashboard -> Optin Cat -> Add New or Select your previously created form.
+To integrate your MailChimp form with your MailChimp account please follow the steps below.
+
+1. Go to your Dashboard -> Optin Cat -> Add New or select a previously created MailChimp form.
+
+2. Go to Email Marketing Provider section -> enter your MailChimp API key.
+
+3. Enter your [MailChimp API key](http://admin.mailchimp.com/account/api) in to the field.
+
+4. If you entered the correct MailChimp API key, a green checkmark will appear. Otherwise, a red error sign will appear. If this is the case, please double check your MailChimp API key.
+
+5. A dropdown will now appear. Select your MailChimp List that you would want your MailChimp form to populate.
+
+= Where to find my MailChimp API Key? =
+You can find your MailChimp API key [here](http://admin.mailchimp.com/account/api).
+
+= How to add my MailChimp list? =
+After entering the correct MailChimp API key a dropdown containing all of your MailChimp lists will appear. Select the MailChimp list of your choice there.
+
+= How to set up MailChimp single optin? =
+This feature is only part of the [premium version](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral) of this plugin. For more information, [click here](https://fatcatapps.com/optincat/docs/email-provider-integrations/how-do-i-set-up-mailchimp-single-optin-with-optin-cat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral).
+
+= The plugin redirects to the Thank You - page but subscribers are not added to my MailChimp list? =
+Keep in mind that MailChimp will send a confirmation email before adding subscribers to your MailChimp list. This email could be delayed by a couple of minutes or end up in your spam folder.
+
+If you're sure that subscribers aren't added to MailChimp, please check with your host if they have PHP CURL installed and if they allow requests to https://api.mailchimp.com/.
+
+= Does this plugin work with MailChimp groups? =
+Not at this time. We might add support for MailChimp groups in the future if there's popuplar demand for it. If you'd like to see this feature, please leave a comment in the suppport forum.
+
+= How to add MailChimp forms to my site? =
+You can add MailChimp optin forms to your site by going to Optin Cat -> Add New. 
+
+First you'll have to choose a MailChimp form type - sidebar widget, post box (goes inside of a WordPress post or page), or lightbox popup.
+
+Then choose a layout and modify the text, colors and design using the point & click editor.
+
+Afterwards, connect the from to the MailChimp API and select a Thank You page.
+
+Finally, publish your MailChimp form. This varies based on the MailChimp form type - instructions can be found in the user interface.
+
+= Which MailChimp form-type is right for me? =
+If your blog has a sidebar (like most blogs), you should definitely set up a MailChimp form and place it at the top of your sidebar. This is a quick & easy win.
+
+Adding a MailChimp post box to the bottom of your blog posts is highly recommended. Readers are highly engaged after reading a post and will be more likely to opt in. For extra effectiveness, you could set up individual MailChimp forms with unique call to actions & text for each category. This will result in even more MailChimp subscribers.
+
+The most effective way to grow your list is our MailChimp popup. This MailChimp form is a lot more agressive than sidebar widgets & post boxes so it should be used with care. The [premium version of this plugin](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral) comes with some advanced settings that let you fine-tune the popup further so you can maximize conversions while not annoying your users.
+
+To recap, the most effective & aggressive MailChimp form is the popup. The MailChimp post box will get you less conversions, but it's a lot more subtle. Finally, the MailChimp sidebar widget will most likely get you the least conversions. Nonetheless, it's worth setting up since it's a quick and easy win.
+
+= How to create & publish a MailChimp sidebar widget? =
+To create your MailChimp Sidebar widget:
+
+1. Go to your Dashboard -> Optin Cat -> Add New.
+
+2. Select “Widgets” and choose a Layout.
+
+3. Configure your MailChimp form’s design, email marketing provider integration and “Thank You”-page. Hit save.
+
+5. Go to Appearance -> Widgets -> Select and add the Optin Cat Widget to your sidebar. Then select your MailChimp form,
+
+6. Click save and view changes on your website afterwards.
+
+= How to display a MailChimp sidebar widget using a shortcode? =
+You can display a MailChimp widget by using this shortcode:
+`[optin-cat id=1361]`
+
+Replace `1361` with the post id of your MailChimp sidebar widget. (*[What is my post id?](https://pagely.com/blog/2015/04/find-post-id-wordpress/)*)
+
+= How to create & publish a MailChimp post box? =
+Post Boxes are MailChipm optin forms that can be added to posts or pages.
+
+1. Go to your Dashboard -> Optin Cat -> Add New
+
+2. Click Post Boxes and choose a Layout you like.
+
+3. Configure your MailChimp Post Box design.
+
+4. Set up a “Thank You” page.
+
+5. To deploy your MailChimp Post Box, scroll to the “Publication” section.
+
+5a. You can deploy your MailChimp Post Box using a shortcode. Copy your shortcode and paste it anywhere on your site.
+
+5b. Or, you can deploy your Post Box by automatically appending it to the bottom of all or certain posts, pages, and categories.
+
+6. Hit save and check your website.
+
+= How to display a MailChimp post box in my template files? =
+You can display shortcodes using `echo do_shortcode($content)`.
+
+Example:
+`<?php echo do_shortcode( '[optin-cat id=1361]' ) ?>`
+
+= How to create & publish a MailChimp popup? =
+Here’s how you create a MalChimp popup.
+
+1. Go to your Dashboard -> Optin Cat -> Add New.
+
+2. Click Popups and click on the Layout of your choice.
+
+3. Configure your MailChimp Popup design.
+
+4. Set up a “Thank You” page.
+
+5. To deploy your MailChimp Popup, scroll to the “Publication” section.
+
+The MailChimp Popup comes with the following targeting options:
+Show MailChimp popup (frequency)
+Time on page is at least X seconds.
+
+[Optin Cat Premium](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral) only:
+Number of pageviews during this visit is at least X.
+Scrolled down on current page at least X%.
+Only show MailChimp popup on the following posts/pages/categories.
+Never show MailChimp popup on the following posts/pages/categories.
+Exit intervention (only part of Business + Elite plans).
+
+= How to add custom CSS to my MailChimp form? =
+Go to Optin Cat -> Powerups and enable Custom CSS. Then go and edit your MailChimp form - you'll now find a CSS textbox.
+
+= What is the New CSS powerup? =
+This powerup is part of MailChimp Forms by Optin Cat for the sake of users that installed this plugin before June 2015. For better mobile & tablet compatibility we decided to rewrite all our CSS from scratch. This setting gives you the ability to use our old CSS instead (not recommended).
+
+= Do your MailChimp forms work on mobile devices? =
+Yes. MailChimp Post Boxes & MailChimp Widgets work on all devices. MailChimp Popups will not be displayed on mobile devices if you use the free plugin.
+The [premium version](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral) comes with mobile MailChimp popups that look great on all devices.
+
+= How does the "no CSS" MailChimp form work? =
+This MailChimp form is available as a MailChimp post box & widget and is made for developers. This form will inherit your theme's styling. Most likely you'll have to add some custom CSS to make the form look great.
+
+= How does the MailChimp form analytics feature work? =
+This plugin tracks all impressions and conversions of your MailChimp forms, even if your site is cached. Your MailChimp form analytics will be displayed as a beautiful graph in your WordPress dashboard, plus you can view each individual form's stats by going to Optin Cat -> All Optin Forms. You can also reset the stats of each MailChimp form by going above screen, hovering over the form and clicking "Reset Stats".
+
+= Do I need to set up a thank you page? How does it work? =
+Whenever a MailChimp form was sucessfully submitted, the new subscriber will be redirected to a thank you page.
+A Thank You page is a normal WordPress page. It's recommended that you add some text like "Thanks for subscribing, please check your email". Even better, you could add some further call to action such as "like us on Facebook" or "check out our products".
+
+Setting up a Thank You page is required.
+
+= What are the differences between MailChimp Forms by Optin Cat Free & Premium? =
+> MailChimp Forms by Optin Cat Premium hels you get more subscribers with the following features:<br />
+> Mobile MailChimp popups.<br />
+> Smart Popup Targeting.<br />
+> MailChimp single optin.<br />
+> Lots Of Additional Beatiful Layout & Design Options.<br />
+> Two Step Optin Feature: Trigger a Mailchimp Popup Optin Form after the user clicks on a hyperlink.<br />
+> Offers Feature: Send optin baits & content upgrades straight from your WordPress backend.<br />
+> Exit Intervention: Display popups when the user is about to leave your site.<br />
+> Priority Email Support.<br />
+>
+>
+> [Learn more about MailChimp Forms by Optin Cat Premium >>](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral)
+
+
 
 == About MailChimp ==
+
+= About MailChimp =
 
 [MailChimp](http://mailchimp.com/) is currently used by more than seven million businesses and people throughout the world. The features and integrations of MailChimp allow you to send out automated messages, marketing emails, as well as different targeted campaigns. 
 
@@ -95,6 +267,9 @@ With MailChimp you will be able to build a list of people that you want to targe
 If you have been looking for the best email marketing software programs, look no further than MailChimp. This is truly an EMS program that will allow you to do everything that you need to. The pricing scheme is affordable, making MailChimp perfect for any size company large or small. 
 
 == Changelog ==
+
+= MailChimp Forms by Optin Cat 1.3.1 =
+* Fixed a bug that caused some conversions to be tracked more than once
 
 = MailChimp Forms by Optin Cat 1.3 =
 * Added Analytics feature
