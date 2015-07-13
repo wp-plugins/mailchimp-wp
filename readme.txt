@@ -6,8 +6,8 @@ Tags: mailchimp, mailchimp wordpress, mailchimp form, mailchimp widget, mailchim
 Author URI: https://fatcatapps.com/
 Plugin URI: https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
 Requires at least: 3.9.1
-Tested up to: 4.2.2
-Stable tag: 1.3.1
+Tested up to: 4.2.3
+Stable tag: 1.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,7 +59,7 @@ You'll need a self-hosted WordPress.org site and a MailChimp account - [sign up 
 > MailChimp single optin.<br />
 > Lots Of Additional Beatiful Layout & Design Options.<br />
 > Two Step Optin Feature: Trigger a Mailchimp Popup Optin Form after the user clicks on a hyperlink.<br />
-> Offers Feature: Send optin baits & content upgrades straight from your WordPress backend.<br />
+> Content Upgrades: Send optin baits & content upgrades straight from your WordPress backend.<br />
 > Exit Intervention: Display popups when the user is about to leave your site.<br />
 > Priority Email Support.<br />
 >
@@ -85,7 +85,7 @@ You'll need a self-hosted WordPress.org site and a MailChimp account - [sign up 
 3. In your sidebar, select 'Optin Cat -> Add New' to create a new MailChimp form.
 4. Choose Sidebar Widget, Post Box or Popup - MailChimp form
 
-== FAQ ==
+== Frequently Asked Questions ==
 
 = Do I need a MailChimp account? =
 Yes, you need a MailChimp account. [You can sign up for a free MailChimp account here](http://mailchimp.com/).
@@ -241,7 +241,7 @@ Setting up a Thank You page is required.
 > MailChimp single optin.<br />
 > Lots Of Additional Beatiful Layout & Design Options.<br />
 > Two Step Optin Feature: Trigger a Mailchimp Popup Optin Form after the user clicks on a hyperlink.<br />
-> Offers Feature: Send optin baits & content upgrades straight from your WordPress backend.<br />
+> Content Upgrades: Send optin baits & content upgrades straight from your WordPress backend.<br />
 > Exit Intervention: Display popups when the user is about to leave your site.<br />
 > Priority Email Support.<br />
 >
@@ -267,6 +267,16 @@ With MailChimp you will be able to build a list of people that you want to targe
 If you have been looking for the best email marketing software programs, look no further than MailChimp. This is truly an EMS program that will allow you to do everything that you need to. The pricing scheme is affordable, making MailChimp perfect for any size company large or small. 
 
 == Changelog ==
+
+= MailChimp Forms by Optin Cat 1.3.4 =
+* Refactored MailChimp Popup Targeting Engine for better performance
+
+= MailChimp Forms by Optin Cat 1.3.3 =
+* Performance improvements
+* Minor Bugfixes
+
+= MailChimp Forms by Optin Cat 1.3.2 =
+* Fixed a bug that caused display issues on some sites after unchecking the "New CSS" powerup
 
 = MailChimp Forms by Optin Cat 1.3.1 =
 * Fixed a bug that caused some conversions to be tracked more than once

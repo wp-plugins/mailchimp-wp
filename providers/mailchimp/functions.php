@@ -1,6 +1,16 @@
 <?php
 
 function mailchimp_object( $settings ) {
+	static $object = null;
+
+	if ( is_null( $object ) ) {
+		$object = mailchimp_object_create( $settings );
+	}
+
+	return $object;
+}
+
+function mailchimp_object_create( $settings ) {
 
 	if( ! class_exists( 'MailChimp' ) ) {
 		require_once $settings[ 'plugin_dir' ] . "providers/mailchimp/MailChimp.php";
@@ -40,12 +50,14 @@ function mailchimp_object( $settings ) {
 
 function mailchimp_get_lists( $settings ) {
 
+	$helper = mailchimp_object( $settings );
+
 	// Return an empty array if the object is not a valid MailChimp Api instance
-	if ( ! is_a( $settings[ 'mailchimp_helper' ], 'MailChimp' ) ) {
+	if ( empty( $helper ) ) {
 		return array();
 	}
 
-	$lists = $settings[ 'mailchimp_helper' ]->call( 'lists/list' );
+	$lists = $helper->call( 'lists/list' );
 	$lists = K::get_var( 'data', $lists, array() );
 
 	return $lists;
@@ -82,7 +94,9 @@ function mailchimp_ajax_get_lists() {
 
 function mailchimp_add_user( $settings, $user_data, $list_id ) {
 
-	if( empty( $settings[ 'mailchimp_helper' ] ) ) {
+	$helper = mailchimp_object( $settings );
+
+	if ( empty( $helper ) ) {
 		return false;
 	}
 
@@ -91,7 +105,7 @@ function mailchimp_add_user( $settings, $user_data, $list_id ) {
 	$double_opt_in = 'true' === $double_opt_in;
 
 	// Subscribe user
-	$subscribed = $settings[ 'mailchimp_helper' ]->call( 'lists/subscribe', array(
+	$subscribed = $helper->call( 'lists/subscribe', array(
 		'id'                => $list_id,
 		'email'             => array( 'email' => K::get_var( 'email', $user_data ) ),
 		'merge_vars'        => array( 'FNAME' => K::get_var( 'name', $user_data ) ),
@@ -125,10 +139,10 @@ function mailchimp_string( $def_str ) {
 	return K::get_var( $def_str, $strings, $def_str );
 }
 
-function mailchimp_integration( $helper ) {
+function mailchimp_integration( $settings ) {
 
 	// Detect free version (has mailchimp only)
-	$eoi_free = 'mailchimp' === K::get_var( 'provider', $helper ) ;
+	$eoi_free = 'mailchimp' === K::get_var( 'provider', $settings );
 
 	global $post;
 	$fca_eoi = get_post_meta( $post->ID, 'fca_eoi', true );
@@ -148,7 +162,7 @@ function mailchimp_integration( $helper ) {
 	// Remember old Mailcihmp settings if we are in a new form
 	$suggested = array();
 	if ( 'add' === $screen->action ) {
-		$fca_eoi_last_3_forms = $helper[ 'fca_eoi_last_3_forms' ];
+		$fca_eoi_last_3_forms = $settings[ 'fca_eoi_last_3_forms' ];
 		foreach ( $fca_eoi_last_3_forms as $fca_eoi_previous_form ) {
 			try {
 				if( K::get_var( 'mailchimp_list_id', $fca_eoi_previous_form[ 'fca_eoi' ] ) ) {
@@ -165,7 +179,7 @@ function mailchimp_integration( $helper ) {
 	}
 
 	// Prepare the lists for K
-	$lists = mailchimp_get_lists( $helper );
+	$lists = mailchimp_get_lists( $settings );
 	$lists_formatted = array( '' => 'Not set' );
 	foreach ( $lists as $list ) {
 		$lists_formatted[ $list[ 'id' ] ] = $list[ 'name' ];
