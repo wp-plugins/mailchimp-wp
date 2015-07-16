@@ -6,8 +6,8 @@ Tags: mailchimp, mailchimp wordpress, mailchimp form, mailchimp widget, mailchim
 Author URI: https://fatcatapps.com/
 Plugin URI: https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
 Requires at least: 3.9.1
-Tested up to: 4.2.3
-Stable tag: 1.3.4
+Tested up to: 4.3
+Stable tag: 1.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,7 +59,7 @@ You'll need a self-hosted WordPress.org site and a MailChimp account - [sign up 
 > MailChimp single optin.<br />
 > Lots Of Additional Beatiful Layout & Design Options.<br />
 > Two Step Optin Feature: Trigger a Mailchimp Popup Optin Form after the user clicks on a hyperlink.<br />
-> Content Upgrades: Send optin baits & content upgrades straight from your WordPress backend.<br />
+> Offers Feature: Send optin baits & content upgrades straight from your WordPress backend.<br />
 > Exit Intervention: Display popups when the user is about to leave your site.<br />
 > Priority Email Support.<br />
 >
@@ -241,7 +241,7 @@ Setting up a Thank You page is required.
 > MailChimp single optin.<br />
 > Lots Of Additional Beatiful Layout & Design Options.<br />
 > Two Step Optin Feature: Trigger a Mailchimp Popup Optin Form after the user clicks on a hyperlink.<br />
-> Content Upgrades: Send optin baits & content upgrades straight from your WordPress backend.<br />
+> Offers Feature: Send optin baits & content upgrades straight from your WordPress backend.<br />
 > Exit Intervention: Display popups when the user is about to leave your site.<br />
 > Priority Email Support.<br />
 >
@@ -268,8 +268,12 @@ If you have been looking for the best email marketing software programs, look no
 
 == Changelog ==
 
+= MailChimp Forms by Optin Cat 1.3.5 =
+* Improved MailChimp Popup targeting engine: changed how a session is counted (a session now expires after 30 minutes of inactivity).
+
 = MailChimp Forms by Optin Cat 1.3.4 =
-* Refactored MailChimp Popup Targeting Engine for better performance
+* Improved MailChimp Popup targeting engine for better performance.
+* Improved MailChimp Post Box targeting: only one box can be displayed at the bottom of the post at any given time going forward. The most exactly targeted post box will be given priority (eg. Individual Post > Category > All Posts)
 
 = MailChimp Forms by Optin Cat 1.3.3 =
 * Performance improvements
