@@ -7,7 +7,7 @@ Author URI: https://fatcatapps.com/
 Plugin URI: https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
 Requires at least: 3.9.1
 Tested up to: 4.3
-Stable tag: 1.3.3
+Stable tag: 1.3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -267,6 +267,9 @@ With MailChimp you will be able to build a list of people that you want to targe
 If you have been looking for the best email marketing software programs, look no further than MailChimp. This is truly an EMS program that will allow you to do everything that you need to. The pricing scheme is affordable, making MailChimp perfect for any size company large or small. 
 
 == Changelog ==
+
+= MailChimp Forms by Optin Cat 1.3.6 =
+* Fixed a bug in the Popup targeting engine introduced in MailChimp Forms by Optin Cat 1.3.5.
 
 = MailChimp Forms by Optin Cat 1.3.5 =
 * Improved MailChimp Popup targeting engine: changed how a session is counted (a session now expires after 30 minutes of inactivity).
