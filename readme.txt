@@ -4,10 +4,10 @@ Donate link: https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_
 Tags: mailchimp, mailchimp wordpress, mailchimp form, mailchimp widget, mailchimp plugin, mailchimp wordpress widget, popup, lightbox popup, mailchimp signup widget, Fatcat Apps
 
 Author URI: https://fatcatapps.com/
-Plugin URI: https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
+Plugin URI: https://fatcatapps.com/optincat/upgrade/m?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
 Requires at least: 3.9.1
 Tested up to: 4.3
-Stable tag: 1.3.6
+Stable tag: 1.3.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,12 +59,12 @@ You'll need a self-hosted WordPress.org site and a MailChimp account - [sign up 
 > MailChimp single optin.<br />
 > Lots Of Additional Beatiful Layout & Design Options.<br />
 > Two Step Optin Feature: Trigger a Mailchimp Popup Optin Form after the user clicks on a hyperlink.<br />
-> Offers Feature: Send optin baits & content upgrades straight from your WordPress backend.<br />
+> Content Upgrade Feature: Send optin baits & content upgrades straight from your WordPress backend.<br />
 > Exit Intervention: Display popups when the user is about to leave your site.<br />
 > Priority Email Support.<br />
 >
 >
-> [Learn more about MailChimp Forms by Optin Cat Premium >>](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral)
+> [Learn more about MailChimp Forms by Optin Cat Premium >>](https://fatcatapps.com/optincat/upgrade/m?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral)
 
 
 
@@ -114,7 +114,7 @@ You can find your MailChimp API key [here](http://admin.mailchimp.com/account/ap
 After entering the correct MailChimp API key a dropdown containing all of your MailChimp lists will appear. Select the MailChimp list of your choice there.
 
 = How to set up MailChimp single optin? =
-This feature is only part of the [premium version](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral) of this plugin. For more information, [click here](https://fatcatapps.com/optincat/docs/email-provider-integrations/how-do-i-set-up-mailchimp-single-optin-with-optin-cat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral).
+This feature is only part of the [premium version](https://fatcatapps.com/optincat/upgrade/m?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral) of this plugin. For more information, [click here](https://fatcatapps.com/optincat/docs/email-provider-integrations/how-do-i-set-up-mailchimp-single-optin-with-optin-cat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral).
 
 = The plugin redirects to the Thank You - page but subscribers are not added to my MailChimp list? =
 Keep in mind that MailChimp will send a confirmation email before adding subscribers to your MailChimp list. This email could be delayed by a couple of minutes or end up in your spam folder.
@@ -140,7 +140,7 @@ If your blog has a sidebar (like most blogs), you should definitely set up a Mai
 
 Adding a MailChimp post box to the bottom of your blog posts is highly recommended. Readers are highly engaged after reading a post and will be more likely to opt in. For extra effectiveness, you could set up individual MailChimp forms with unique call to actions & text for each category. This will result in even more MailChimp subscribers.
 
-The most effective way to grow your list is our MailChimp popup. This MailChimp form is a lot more agressive than sidebar widgets & post boxes so it should be used with care. The [premium version of this plugin](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral) comes with some advanced settings that let you fine-tune the popup further so you can maximize conversions while not annoying your users.
+The most effective way to grow your list is our MailChimp popup. This MailChimp form is a lot more agressive than sidebar widgets & post boxes so it should be used with care. The [premium version of this plugin](https://fatcatapps.com/optincat/upgrade/m?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral) comes with some advanced settings that let you fine-tune the popup further so you can maximize conversions while not annoying your users.
 
 To recap, the most effective & aggressive MailChimp form is the popup. The MailChimp post box will get you less conversions, but it's a lot more subtle. Finally, the MailChimp sidebar widget will most likely get you the least conversions. Nonetheless, it's worth setting up since it's a quick and easy win.
 
@@ -205,7 +205,7 @@ The MailChimp Popup comes with the following targeting options:
 Show MailChimp popup (frequency)
 Time on page is at least X seconds.
 
-[Optin Cat Premium](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral) only:
+[Optin Cat Premium](https://fatcatapps.com/optincat/upgrade/m?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral) only:
 Number of pageviews during this visit is at least X.
 Scrolled down on current page at least X%.
 Only show MailChimp popup on the following posts/pages/categories.
@@ -220,7 +220,7 @@ This powerup is part of MailChimp Forms by Optin Cat for the sake of users that 
 
 = Do your MailChimp forms work on mobile devices? =
 Yes. MailChimp Post Boxes & MailChimp Widgets work on all devices. MailChimp Popups will not be displayed on mobile devices if you use the free plugin.
-The [premium version](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral) comes with mobile MailChimp popups that look great on all devices.
+The [premium version](https://fatcatapps.com/optincat/upgrade/m?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral) comes with mobile MailChimp popups that look great on all devices.
 
 = How does the "no CSS" MailChimp form work? =
 This MailChimp form is available as a MailChimp post box & widget and is made for developers. This form will inherit your theme's styling. Most likely you'll have to add some custom CSS to make the form look great.
@@ -246,7 +246,7 @@ Setting up a Thank You page is required.
 > Priority Email Support.<br />
 >
 >
-> [Learn more about MailChimp Forms by Optin Cat Premium >>](https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral)
+> [Learn more about MailChimp Forms by Optin Cat Premium >>](https://fatcatapps.com/optincat/upgrade/m?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral)
 
 
 
@@ -267,6 +267,12 @@ With MailChimp you will be able to build a list of people that you want to targe
 If you have been looking for the best email marketing software programs, look no further than MailChimp. This is truly an EMS program that will allow you to do everything that you need to. The pricing scheme is affordable, making MailChimp perfect for any size company large or small. 
 
 == Changelog ==
+
+= MailChimp Forms by Optin Cat 1.3.8 =
+* Fixed an issue related to bots causing fake conversion data.
+
+= MailChimp Forms by Optin Cat 1.3.7 =
+* Tiny fix: Ignore shortcode if the global $post is empty
 
 = MailChimp Forms by Optin Cat 1.3.6 =
 * Fixed a bug in the Popup targeting engine introduced in MailChimp Forms by Optin Cat 1.3.5.
