@@ -6,8 +6,8 @@ Tags: mailchimp, mailchimp wordpress, mailchimp form, mailchimp widget, mailchim
 Author URI: https://fatcatapps.com/
 Plugin URI: https://fatcatapps.com/optincat/upgrade/m?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
 Requires at least: 3.9.1
-Tested up to: 4.3
-Stable tag: 1.3.8
+Tested up to: 4.4
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,14 +55,15 @@ You'll need a self-hosted WordPress.org site and a MailChimp account - [sign up 
 > #### Optin Cat Premium
 > MailChimp Forms by Optin Cat Premium hels you grow your list with the following features:<br />
 > Mobile MailChimp popups.<br />
-> Smart Popup Targeting.<br />
-> MailChimp single optin.<br />
-> Lots Of Additional Beatiful Layout & Design Options.<br />
-> Two Step Optin Feature: Trigger a Mailchimp Popup Optin Form after the user clicks on a hyperlink.<br />
-> Content Upgrade Feature: Send optin baits & content upgrades straight from your WordPress backend.<br />
+> MailChimp single optin feature (disable double optin).<br />
+> Lots of extra layout & design options.<br />
+> Smart popup targeting.<br />
+> Mobile Campaign Monitor popups.<br />
+> Two Step Optins: Trigger a popup after the user clicks on a hyperlink.<br />
+> Optin Bait Delivery: Send optin baits straight from WordPress.<br />
 > Exit Intervention: Display popups when the user is about to leave your site.<br />
-> Priority Email Support.<br />
->
+> Attention grabbing Popup Effects.<br />
+> Priority email support.<br />
 >
 > [Learn more about MailChimp Forms by Optin Cat Premium >>](https://fatcatapps.com/optincat/upgrade/m?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral)
 
@@ -241,7 +242,7 @@ Setting up a Thank You page is required.
 > MailChimp single optin.<br />
 > Lots Of Additional Beatiful Layout & Design Options.<br />
 > Two Step Optin Feature: Trigger a Mailchimp Popup Optin Form after the user clicks on a hyperlink.<br />
-> Offers Feature: Send optin baits & content upgrades straight from your WordPress backend.<br />
+> Optin Bait Delivery: Send Optin Baits straight from WordPress.<br />
 > Exit Intervention: Display popups when the user is about to leave your site.<br />
 > Priority Email Support.<br />
 >
@@ -267,6 +268,19 @@ With MailChimp you will be able to build a list of people that you want to targe
 If you have been looking for the best email marketing software programs, look no further than MailChimp. This is truly an EMS program that will allow you to do everything that you need to. The pricing scheme is affordable, making MailChimp perfect for any size company large or small. 
 
 == Changelog ==
+
+= MailChimp Forms by Optin Cat 1.4.1 =
+* Bugfix: Fixed a conflict with the Beaver Builder plugin
+* Various other small bugfixes & improvements
+
+= MailChimp Forms by Optin Cat 1.4.0 =
+* Changed: Updated layout selection screen to be responsive and look more like Wordpress theme select screen.
+* Fixed: Hide Optin Cat shortcode insert button and dashboard widget from users with privileges below editor (subscriber and author).
+* Fixed: Logged in users no longer count towards impressions on forms.
+
+= MailChimp Forms by Optin Cat 1.3.9 =
+* Fixed: A bug in our MailChimp popup targeting engine caused the "display once per month" criteria to not work as expected in some cases, which kinda defeated the purpose of our fancy targeting engine.
+* Fixed: MailChimp Forms by Optin Cat caused a site's W3 HTML validation to fail due to the placement of the <style>-tag. This wasn't a big problem (all browsers always rendered Optin Cat properly), but not ideal.
 
 = MailChimp Forms by Optin Cat 1.3.8 =
 * Fixed an issue related to bots causing fake conversion data.
